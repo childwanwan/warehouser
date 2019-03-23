@@ -12,4 +12,13 @@
         where status !=9999
     </select>
 
+
+    <!--查询所有的goods操作,在故障单的除外-->
+    <select id="getGoodsExceptError" resultType="com.ecut.warehouse.warehouse.entity.Goods">
+        SELECT   id,goods_code,goods_name,specification_items,custom_attribute_items,status,
+        comment,goods_type,goods_num
+        FROM tbl_goods
+        where status !=9999 and status !=2
+    </select>
+
 </mapper>

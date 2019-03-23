@@ -18,4 +18,5 @@ import java.util.List;
 @Mapper
 public interface GoodsDao {
 	public List<Goods> queryGoods();
+	public List<Goods> getGoodsExceptError();
 }

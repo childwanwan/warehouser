@@ -33,16 +33,15 @@ public class GoodsController {
 
 	/*
 	 * @Author:Childwanwan
-	 * @Description:登入controller
+	 * @Description:查询所有的goods，包括报损状态中的
 	 * @Para:* @param 登入信息
 	 * @data:2019/3/17  22:50
 	 */
-	@RequestMapping(value = "/warehouse/getGoods", method = RequestMethod.GET)
-	public ResponseEntity<JSONObject> getWarehouse() {
+	@RequestMapping(value = "/goods/getGoods", method = RequestMethod.GET)
+	public ResponseEntity<JSONObject> getGoods() {
 		//定义返回的json
 		JSONObject returnJson = new JSONObject();
 		List<Goods> list = new ArrayList<>();
-
 		try{
 			list = goodsService.queryGoods();
 		}catch (Exception e){
@@ -52,8 +51,30 @@ public class GoodsController {
 			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.OK);
 			returnJson.put("data",list);
 		}
+		//获取参数，及将参数封装成对象
+		return new ResponseEntity<>(returnJson, HttpStatus.ACCEPTED);
+	}
 
-
+	/*
+	 * @Author:Childwanwan
+	 * @Description:查询所有的goods，包括报损状态中的
+	 * @Para:* @param 登入信息
+	 * @data:2019/3/17  22:50
+	 */
+	@RequestMapping(value = "/goods/getGoodsExceptError", method = RequestMethod.GET)
+	public ResponseEntity<JSONObject> getGoodsExceptError() {
+		//定义返回的json
+		JSONObject returnJson = new JSONObject();
+		List<Goods> list = new ArrayList<>();
+		try{
+			list = goodsService.getGoodsExceptError();
+		}catch (Exception e){
+			returnJson= ReturnJsonData.returnJsonFunction(ReturnJsonData.SYS_ERROR);
+		}
+		if (null != list && list.size()>0){
+			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.OK);
+			returnJson.put("data",list);
+		}
 		//获取参数，及将参数封装成对象
 		return new ResponseEntity<>(returnJson, HttpStatus.ACCEPTED);
 	}

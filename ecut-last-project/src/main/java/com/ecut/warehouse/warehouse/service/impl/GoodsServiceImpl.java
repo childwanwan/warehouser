@@ -24,4 +24,9 @@ public class GoodsServiceImpl implements GoodsService {
 	public List<Goods> queryGoods() {
 		return goodsDao.queryGoods();
 	}
+
+	@Override
+	public List<Goods> getGoodsExceptError() {
+		return goodsDao.getGoodsExceptError();
+	}
 }

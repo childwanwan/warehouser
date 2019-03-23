@@ -15,4 +15,6 @@ import java.util.List;
 
 public interface GoodsService {
 	public List<Goods> queryGoods();
+
+	public List<Goods> getGoodsExceptError();
 }
