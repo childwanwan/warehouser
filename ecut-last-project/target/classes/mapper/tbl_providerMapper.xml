@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecut.warehouse.warehouse.dao.ProviderDao">
+
+    <!--查询所有的供应商操作-->
+    <select id="queryProvider" resultType="com.ecut.warehouse.warehouse.entity.Provider">
+        SELECT   id,provider_type,provider_name,linkman,telephone,addr,status
+        FROM tbl_provider
+        where status !=9999
+    </select>
+
+
+    <!--查询所有的goods操作,在故障单的除外-->
+    <select id="getProviderByCondition" resultType="com.ecut.warehouse.warehouse.entity.Provider">
+        SELECT id,provider_type,provider_name,linkman,telephone,addr,status
+        FROM tbl_provider
+        where 1=1
+        <if test="null != id and '' != id">
+            and id like CONCAT('%',#{id,jdbcType=VARCHAR},'%')
+        </if>
+        <if test="null != providerType and '' != providerType">
+            and provider_type like CONCAT('%',#{providerType,jdbcType=VARCHAR},'%')
+        </if>
+        <if test="null != providerName and '' != providerName">
+            and provider_name like CONCAT('%',#{providerName,jdbcType=VARCHAR},'%')
+        </if>
+        <if test="null != linkman and '' != linkman">
+            and linkman like CONCAT('%',#{linkman,jdbcType=VARCHAR},'%')
+        </if>
+        <if test="null != telephone and '' != telephone">
+            and telephone like CONCAT('%',#{telephone,jdbcType=VARCHAR},'%')
+        </if>
+        <if test="null != addr and '' != addr">
+            and addr like CONCAT('%',#{addr,jdbcType=VARCHAR},'%')
+        </if>
+        and status !=9999
+    </select>
+
+</mapper>
