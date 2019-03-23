@@ -29,9 +29,11 @@ public class Goods {
 	//规格集
 	private String specificationItems;
 	//自定义规格
-	private String CustomAttributeItems;
+	private String customAttributeItems;
+	//
+	private Integer status;
 	//备注
-	private String Comment;
+	private String comment;
 	//商品类型
 	private String goodsType;
 	//商品数量

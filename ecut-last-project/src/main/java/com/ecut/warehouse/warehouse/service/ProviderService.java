@@ -18,4 +18,5 @@ import java.util.List;
 public interface ProviderService {
 	public List<Provider> queryProvider();
 	public List<Provider> getProviderByCondition(Provider provider);
+	public int addProvider(Provider provider);
 }

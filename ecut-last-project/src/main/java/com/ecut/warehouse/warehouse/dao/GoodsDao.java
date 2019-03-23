@@ -20,4 +20,5 @@ import java.util.List;
 public interface GoodsDao {
 	public List<Goods> queryGoods();
 	public List<Goods> getGoodsExceptError();
+	public int addGoods(Goods goods);
 }

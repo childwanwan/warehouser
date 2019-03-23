@@ -4,6 +4,7 @@ import com.ecut.warehouse.warehouse.domain.ReturnJsonData;
 import com.ecut.warehouse.warehouse.entity.Goods;
 import com.ecut.warehouse.warehouse.entity.Provider;
 import com.ecut.warehouse.warehouse.service.ProviderService;
+import com.ecut.warehouse.warehouse.utils.CommonUtils;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -101,6 +102,37 @@ public class ProviderControllre {
 		if (null != list && list.size()>0){
 			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.OK);
 			returnJson.put("data",list);
+		}
+		//获取参数，及将参数封装成对象
+		return new ResponseEntity<>(returnJson, HttpStatus.ACCEPTED);
+	}
+
+
+
+	/*
+	 * @Author:Childwanwan
+	 * @Description:添加供应商
+	 * @Para:* @param
+	 * @data:2019/3/17  22:50
+	 */
+	@RequestMapping(value = "/provider/addProvider", method = RequestMethod.POST)
+	public ResponseEntity<JSONObject> addProvider(@RequestBody Provider provider) {
+		//定义返回的json
+		JSONObject returnJson = new JSONObject();
+		if (null==provider.getId()||"".equals(provider.getId())){
+			provider.setId(CommonUtils.getUUID());
+		}
+		if (null==provider.getStatus()||"".equals(provider.getStatus())){
+			provider.setStatus(0);
+		}
+		int i = 0;
+		try{
+			i = providerService.addProvider(provider);
+		}catch (Exception e){
+			returnJson= ReturnJsonData.returnJsonFunction(ReturnJsonData.SYS_ERROR);
+		}
+		if (i>0){
+			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.OK);
 		}
 		//获取参数，及将参数封装成对象
 		return new ResponseEntity<>(returnJson, HttpStatus.ACCEPTED);

@@ -5,6 +5,7 @@ import com.ecut.warehouse.warehouse.entity.Goods;
 import com.ecut.warehouse.warehouse.service.GoodsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -28,5 +29,11 @@ public class GoodsServiceImpl implements GoodsService {
 	@Override
 	public List<Goods> getGoodsExceptError() {
 		return goodsDao.getGoodsExceptError();
+	}
+
+	@Override
+	@Transactional
+	public int addGoods(Goods goods) {
+		return goodsDao.addGoods(goods);
 	}
 }

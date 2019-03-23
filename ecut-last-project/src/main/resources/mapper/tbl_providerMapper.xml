@@ -11,7 +11,6 @@
         where status !=9999
     </select>
 
-
     <!--查询所有的goods操作,在故障单的除外-->
     <select id="getProviderByCondition" resultType="com.ecut.warehouse.warehouse.entity.Provider">
         SELECT id,provider_type,provider_name,linkman,telephone,addr,status
@@ -38,4 +37,10 @@
         and status !=9999
     </select>
 
+    <!--增加操作-->
+    <insert id="addProvider" keyProperty="id" keyColumn="id" parameterType="com.ecut.warehouse.warehouse.entity.Provider">
+        insert tbl_provider(id,provider_type,provider_name,linkman,telephone,addr,status)
+         VALUES
+        (#{id}, #{providerType},#{providerName}, #{linkman}, #{telephone},#{addr},#{status})
+    </insert>
 </mapper>

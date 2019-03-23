@@ -17,4 +17,6 @@ public interface GoodsService {
 	public List<Goods> queryGoods();
 
 	public List<Goods> getGoodsExceptError();
+
+	public int addGoods(Goods goods);
 }

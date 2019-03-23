@@ -33,8 +33,8 @@
 
 
     <!--增加操作-->
-    <insert id="addEmployee" keyProperty="id" keyColumn="id" parameterType="com.ecut.warehouse.warehouse.entity.Employee">
-        insert tbl_employee(id,employee_name,password,telephone,addr,status)
+    <insert id="addGoods" keyProperty="id" keyColumn="id" parameterType="com.ecut.warehouse.warehouse.entity.Employee">
+        insert tbl_goods(id,employee_name,password,telephone,addr,status)
          VALUES
         (#{id}, #{employeeName},#{password}, #{telephone}, #{addr},#{status})
     </insert>

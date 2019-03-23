@@ -4,6 +4,7 @@ import com.ecut.warehouse.warehouse.domain.ReturnJsonData;
 import com.ecut.warehouse.warehouse.entity.Goods;
 import com.ecut.warehouse.warehouse.service.GoodsService;
 import com.ecut.warehouse.warehouse.service.impl.GoodsServiceImpl;
+import com.ecut.warehouse.warehouse.utils.CommonUtils;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -74,6 +75,39 @@ public class GoodsController {
 		if (null != list && list.size()>0){
 			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.OK);
 			returnJson.put("data",list);
+		}
+		//获取参数，及将参数封装成对象
+		return new ResponseEntity<>(returnJson, HttpStatus.ACCEPTED);
+	}
+
+	/*
+	 * @Author:Childwanwan
+	 * @Description:添加供应商
+	 * @Para:* @param
+	 * @data:2019/3/17  22:50
+	 */
+	@RequestMapping(value = "/goods/addGoods", method = RequestMethod.POST)
+	public ResponseEntity<JSONObject> addGoods(@RequestBody Goods goods) {
+		//定义返回的json
+		JSONObject returnJson = new JSONObject();
+		if (null==goods.getId()||"".equals(goods.getId())){
+			goods.setId(CommonUtils.getUUID());
+		}
+		if (null==goods.getGoodsNum()||"".equals(goods.getGoodsNum())){
+			goods.setGoodsNum(1);
+		}
+		if (null==goods.getStatus()){
+			goods.setStatus(1);
+		}
+		System.out.println(goods);
+		int i = 0;
+		try{
+			i = goodsService.addGoods(goods);
+		}catch (Exception e){
+			returnJson= ReturnJsonData.returnJsonFunction(ReturnJsonData.SYS_ERROR);
+		}
+		if (i>0){
+			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.OK);
 		}
 		//获取参数，及将参数封装成对象
 		return new ResponseEntity<>(returnJson, HttpStatus.ACCEPTED);

@@ -5,6 +5,7 @@ import com.ecut.warehouse.warehouse.entity.Provider;
 import com.ecut.warehouse.warehouse.service.ProviderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -28,5 +29,11 @@ public class ProviderServiceImpl implements ProviderService {
 	@Override
 	public List<Provider> getProviderByCondition(Provider provider) {
 		return providerDao.getProviderByCondition(provider);
+	}
+
+	@Override
+	@Transactional
+	public int addProvider(Provider provider) {
+		return providerDao.addProvider(provider);
 	}
 }

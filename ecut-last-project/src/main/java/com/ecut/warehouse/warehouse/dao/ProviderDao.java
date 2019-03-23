@@ -19,4 +19,5 @@ import java.util.List;
 public interface ProviderDao {
 	public List<Provider> queryProvider();
 	public List<Provider> getProviderByCondition(Provider provider);
+	public int addProvider(Provider provider);
 }
