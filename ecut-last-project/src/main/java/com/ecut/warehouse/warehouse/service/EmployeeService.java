@@ -1,6 +1,7 @@
 package com.ecut.warehouse.warehouse.service;
 
 import com.ecut.warehouse.warehouse.entity.Employee;
+import com.ecut.warehouse.warehouse.entity.Goods;
 
 /**
  * Copyright (C), 2015-2019, XXX有限公司
@@ -15,4 +16,7 @@ import com.ecut.warehouse.warehouse.entity.Employee;
 
 public interface EmployeeService {
 	public Employee selectEmployeeByUsernamePasswordType(Employee employee);
+	public int updateEmployee(Employee employee);
+	public Employee getEmployeeById(Employee employee);
+	public int addEmployee(Employee employee);
 }

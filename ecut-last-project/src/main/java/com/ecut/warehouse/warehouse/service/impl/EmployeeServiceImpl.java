@@ -5,6 +5,7 @@ import com.ecut.warehouse.warehouse.entity.Employee;
 import com.ecut.warehouse.warehouse.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * Copyright (C), 2019-2019, XXX有限公司
@@ -30,5 +31,21 @@ public class EmployeeServiceImpl implements EmployeeService {
 			return employeeResult;
 		}
 
+	}
+
+	@Override
+	public int updateEmployee(Employee employee) {
+		return employeeDao.updateEmployee(employee);
+	}
+
+	@Override
+	public Employee getEmployeeById(Employee employee) {
+		return employeeDao.getEmployeeById(employee);
+	}
+
+	@Override
+	@Transactional
+	public int addEmployee(Employee employee) {
+		return employeeDao.addEmployee(employee);
 	}
 }

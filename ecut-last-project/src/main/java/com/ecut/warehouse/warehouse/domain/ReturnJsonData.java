@@ -19,6 +19,7 @@ public class ReturnJsonData {
 	public static String PARA_ERROR = "PARA_ERROR";
 	public static String DATA_ERROR = "DATA_ERROR";
 	public static String SYS_ERROR = "SYS_ERROR";
+	public static String UPDATE_ERROR = "UPDATE_ERROR";
 
 	public static JSONObject returnJsonFunction(String returnJsonCode) {
 		JSONObject returnJson = new JSONObject();
@@ -27,7 +28,7 @@ public class ReturnJsonData {
 				//正常情况
 				case "OK": {
 					returnJson.put("retCode", 1);
-					returnJson.put("retMsg", "数据获取成功");
+					returnJson.put("retMsg", "数据操作成功");
 					break;
 				}
 
@@ -49,6 +50,12 @@ public class ReturnJsonData {
 				case "SYS_ERROR": {
 					returnJson.put("retCode", -3);
 					returnJson.put("retMsg", "后台系统异常!");
+					break;
+				}
+				//数据更新异常
+				case "UPDATE_ERROR": {
+					returnJson.put("retCode", -4);
+					returnJson.put("retMsg", "数据更新失败!");
 					break;
 				}
 			}

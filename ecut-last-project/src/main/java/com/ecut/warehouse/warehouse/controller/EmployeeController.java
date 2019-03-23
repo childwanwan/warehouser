@@ -3,9 +3,11 @@ package com.ecut.warehouse.warehouse.controller;
 import com.ecut.warehouse.warehouse.domain.DoChangFunction;
 import com.ecut.warehouse.warehouse.domain.ReturnJsonData;
 import com.ecut.warehouse.warehouse.entity.Employee;
+import com.ecut.warehouse.warehouse.entity.Goods;
 import com.ecut.warehouse.warehouse.service.EmployeeService;
 import com.ecut.warehouse.warehouse.utils.CommonUtils;
 import net.sf.json.JSONObject;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,6 +19,8 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Copyright (C), 2019-2019, XXX有限公司
@@ -103,6 +107,90 @@ public class EmployeeController {
 		} catch (Exception e) {
 			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.SYS_ERROR);
 			throw new RuntimeException("登入出问题了,请联系后台处理人员!" + e);
+		}
+		return new ResponseEntity<>(returnJson, HttpStatus.ACCEPTED);
+	}
+
+
+	/*
+	 * @Author:Childwanwan
+	 * @Description:更新职工信息
+	 * @Para:* @param 更新职工信息
+	 * @data:2019/3/17  22:50
+	 */
+	@RequestMapping(value = "/employee/update", method = RequestMethod.POST)
+	public ResponseEntity<JSONObject> employeeUpdate(@RequestBody Employee employee) {
+		//定义返回的json
+		JSONObject returnJson = new JSONObject();
+		int i = 0;
+		try {
+			i = employeeService.updateEmployee(employee);
+		} catch (Exception e) {
+			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.SYS_ERROR);
+		}
+		if (i > 0) {
+			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.OK);
+		} else {
+			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.UPDATE_ERROR);
+		}
+
+		return new ResponseEntity<>(returnJson, HttpStatus.ACCEPTED);
+	}
+
+
+	/*
+	 * @Author:Childwanwan
+	 * @Description:根据id获取职工信息
+	 * @Para:* @param 根据id获取职工信息
+	 * @data:2019/3/17  22:50
+	 */
+	@RequestMapping(value = "/employee/getEmployeeById", method = RequestMethod.GET)
+	public ResponseEntity<JSONObject> getEmployeeById(@RequestBody Employee employee) {
+		//定义返回的json
+		JSONObject returnJson = new JSONObject();
+		Employee returnEmployee = new Employee();
+		try {
+			returnEmployee = employeeService.getEmployeeById(employee);
+		} catch (Exception e) {
+			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.SYS_ERROR);
+		}
+		if (null != returnEmployee && !"".equals(returnEmployee)) {
+			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.OK);
+			returnJson.put("data", DoChangFunction.employeeChangeToEmployeeForm(returnEmployee));
+		} else {
+			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.DATA_ERROR);
+		}
+		return new ResponseEntity<>(returnJson, HttpStatus.ACCEPTED);
+	}
+
+
+	/*
+	 * @Author:Childwanwan
+	 * @Description:根据id获取职工信息
+	 * @Para:* @param 根据id获取职工信息
+	 * @data:2019/3/17  22:50
+	 */
+	@RequestMapping(value = "/employee/addEmployee", method = RequestMethod.POST)
+	public ResponseEntity<JSONObject> addEmployee(@RequestBody Employee employee) {
+		//定义返回的json
+		JSONObject returnJson = new JSONObject();
+		int i = 0;
+		employee.setId(CommonUtils.getUUID());
+		if (null == employee.getStatus() || "".equals(employee.getStatus())) {
+			employee.setStatus(1);
+		}
+		if(null ==employee.getPassword() || "".equals(employee.getPassword())){
+			employee.setPassword("123456");
+		}
+		try {
+			i = employeeService.addEmployee(employee);
+		} catch (Exception e) {
+			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.SYS_ERROR);
+		}
+		if (i > 0) {
+			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.OK);
+		} else {
+			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.DATA_ERROR);
 		}
 		return new ResponseEntity<>(returnJson, HttpStatus.ACCEPTED);
 	}

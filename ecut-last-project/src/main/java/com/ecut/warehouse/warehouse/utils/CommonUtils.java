@@ -41,18 +41,18 @@ public class CommonUtils {
      * @return 加密后的文本
      * @throws UnsupportedEncodingException
      */
-    public String encodeByMd5(String sourceString) throws UnsupportedEncodingException {
+    public static String encodeByMd5(String sourceString) throws UnsupportedEncodingException {
         return base64en.encode(md5.digest(sourceString.getBytes("utf-8")));
     }
 
 
-    static SimpleDateFormat sdfFull = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    static  SimpleDateFormat sdfFull = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
-    public String getFormatDateTimeNow() {
+    public static String getFormatDateTimeNow() {
         return sdfFull.format(System.currentTimeMillis());
 
     }
-    public String getFormatDateTime(Date date) {
+    public static String getFormatDateTime(Date date) {
         return sdfFull.format(date);
     }
 
@@ -63,11 +63,11 @@ public class CommonUtils {
      * @param timeStamp
      * @return
      */
-    public String getFormatDateTimeByTimeStamp(long timeStamp) {
+    public static String getFormatDateTimeByTimeStamp(long timeStamp) {
         return sdfFull.format(timeStamp);
     }
 
-    static SimpleDateFormat sdfDate = new SimpleDateFormat("yyyy-MM-dd");
+    static  SimpleDateFormat sdfDate = new SimpleDateFormat("yyyy-MM-dd");
 
     /**
      * <P>将年月日字符串转成Date </p>
@@ -75,7 +75,7 @@ public class CommonUtils {
      * @param dateString： 合乎规范的年月日字符串
      * @return Date
      */
-    public Date getDateByDateString(String dateString) {
+    public static Date getDateByDateString(String dateString) {
         if (dateString == null) {
             return null;
         }
@@ -88,14 +88,14 @@ public class CommonUtils {
         return date;
     }
 
-    public String getDateStringByDate(Date date) throws ParseException {
+    public static String getDateStringByDate(Date date) throws ParseException {
         if (date == null) {
             return null;
         }
         return sdfDate.format(date);
     }
 
-    public Long getLongByDate(Date date) {
+    public static Long getLongByDate(Date date) {
         if (date == null) return null;
         return date.getTime();
     }
@@ -105,7 +105,7 @@ public class CommonUtils {
      *
      * @return
      */
-    public String getUUID() {
+    public static String getUUID() {
         return UUID.randomUUID().toString().replace("-", "");
     }
 
@@ -115,7 +115,7 @@ public class CommonUtils {
      * @param before: 起始日期; then: 目标日期
      * @return 整数天
      */
-    public int getDifferenceDay(Date before, Date then) {
+    public static int getDifferenceDay(Date before, Date then) {
         Calendar last_c = Calendar.getInstance();
         last_c.setTime(before);
         Calendar now_c = Calendar.getInstance();
@@ -137,7 +137,7 @@ public class CommonUtils {
      * @param request
      * @return IP address
      */
-    public String getIPAddr(HttpServletRequest request) {
+    public static String getIPAddr(HttpServletRequest request) {
         String ip = request.getHeader("X-real-ip");//先从nginx自定义配置获取
         if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
             ip = request.getHeader("x-forwarded-for");

@@ -19,4 +19,10 @@ public interface EmployeeDao {
 	* 登入操作
 	* */
 	public Employee selectEmployeeByUsernamePasswordType(Employee employee);
+
+	public int updateEmployee(Employee employee);
+
+	public Employee getEmployeeById(Employee employee);
+
+	public int addEmployee(Employee employee);
 }

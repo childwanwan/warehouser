@@ -1,5 +1,6 @@
 package com.ecut.warehouse.warehouse.dao;
 
+import com.ecut.warehouse.warehouse.entity.Employee;
 import com.ecut.warehouse.warehouse.entity.Goods;
 import org.apache.ibatis.annotations.Mapper;
 
