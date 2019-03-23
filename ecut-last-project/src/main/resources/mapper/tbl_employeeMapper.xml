@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecut.warehouse.warehouse.dao.EmployeeDao">
+
+    <!--登入操作-->
+    <select id="selectEmployeeByUsernamePasswordType" resultType="com.ecut.warehouse.warehouse.entity.Employee">
+        SELECT   id,employee_name,password,telephone,addr,status
+        FROM tbl_employee
+        where employee_name=#{employeeName} and password=#{password} and status=#{status}
+    </select>
+
+</mapper>

@@ -1,0 +1,40 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: warehouse
+  datasource:
+    url: jdbc:mysql://120.78.132.185:3306/warehouse?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123
+    hikari:
+      maximum-pool-size: 30
+      minimum-idle: 10
+
+  redis:
+    host: 120.78.132.185 # host ,默认 localhost
+    port: 6379 # 端口号，默认6379
+    jedis:
+      pool:
+        max-idle: 8  # 控制一个pool最多有多少个状态为idle(空闲的)的redis实例，默认值也是8。
+        max-wait: -1 # 等待可用连接的最大时间，单位毫秒，默认值为-1，表示永不超时。
+        min-idle: 0 # 控制一个pool最少有多少个状态为idle(空闲的)的redis实例，默认值为0。
+        max-active: 8
+    timeout: 5000 # 连接超时时间 单位 ms，默认为0
+#   password: redis # 密码，根据自己的 redis 设计，默认为空
+  session:
+    store-type: none
+
+
+# mybatis 别名扫描
+mybatis.type-aliases-package: com.ecut.warehouse.warehouse.entity
+# mapper.xml文件位置,如果没有映射文件，请注释掉
+mybatis.mapper-locations: classpath:/mapper/**.xml
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+
+filter:
+  exclusion:
+    url: /login|/test2
