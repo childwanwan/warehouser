@@ -37,4 +37,4 @@ mybatis:
 
 filter:
   exclusion:
-    url: /login|/test2
+    url: /login.html|/css/|/img/|/js/|/plugins/|/favicon.ico|/admin|/employee/

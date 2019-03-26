@@ -78,6 +78,8 @@ public class EmployeeController {
 		//定义返回的json
 		JSONObject returnJson = new JSONObject();
 
+		System.out.println("已经进入到employee login方法");
+
 		//获取参数，及将参数封装成对象
 		Employee employeePara = new Employee();
 		if (null != jsonObject.get("employeeName") && !"".equals(jsonObject.get("employeeName").toString())
@@ -101,6 +103,8 @@ public class EmployeeController {
 				//调用domain里的函数，将employee转换
 				//System.out.println(returnJson);
 				returnJson.put("data", DoChangFunction.employeeChangeToEmployeeForm(employeeResult));
+				//登录成功，跳转到index页面
+                response.sendRedirect("http://localhost:8080/admin/index.html");
 			} else {
 				returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.DATA_ERROR);
 			}

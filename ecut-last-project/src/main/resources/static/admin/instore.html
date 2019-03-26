@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>采购单查询</title>
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../plugins/adminLTE/css/AdminLTE.css">
+    <link rel="stylesheet" href="../plugins/adminLTE/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+	<script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <script src="../plugins/bootstrap/js/bootstrap.min.js"></script>
+
+
+	<!--引入angular.js-->
+	<script type="text/javascript" src="../plugins/angularjs/angular.min.js"></script>
+	<script src="../plugins/angularjs/pagination.js"></script>
+	<link rel="stylesheet" href="../plugins/angularjs/pagination.css">
+	<!--引入日期插件-->
+	<link rel="stylesheet" type="text/css" href="../plugins/wui-DatePicker/css/wui.min.css">
+	<script type="text/javascript" src="../plugins/wui-DatePicker/js/wui-date.js" charset="utf-8"></script>
+	<!--业务-->
+	<script type="text/javascript" src="../js/base_pagination.js"></script>
+	<script type="text/javascript" src="../js/service/purchaseOrderService.js"></script>
+	<script type="text/javascript" src="../js/controller/baseController.js"></script>
+	<script type="text/javascript" src="../js/controller/purchaseOrderController.js"></script>
+
+
+</head>
+<body class="hold-transition skin-red sidebar-mini" ng-app="warehouse" ng-controller="instoreController">
+  <!-- .box-body -->
+                    <div class="box-header with-border">
+                        <h3 class="box-title">采购单管理</h3>
+                    </div>
+
+                    <div class="box-body">
+
+                        <!-- 数据表格 -->
+                        <div class="table-box">
+
+                            <!--工具栏-->
+                            <div class="pull-left">
+                                <div class="form-group form-inline">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-default" title="新建" data-toggle="modal" data-target="#editModal" ><i class="fa fa-file-o"></i> 新建</button>
+                                        <button type="button" class="btn btn-default" title="删除" ><i class="fa fa-trash-o"></i> 删除</button>           
+                                        <button type="button" class="btn btn-default" title="刷新" onclick="window.location.reload();"><i class="fa fa-refresh"></i> 刷新</button>
+                                    </div>
+                                </div>
+                            </div>
+
+							<div class="pull-left">
+								<div class="form-group form-inline">
+									<div class="msg-group">
+										<span>单据编号:</span>
+										<span>单据时间</span>
+										<span>供应商名称:</span>
+										<span>采购员:</span>
+										<span>单价总和:</span>
+										<span>总计:</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="box-tools pull-right">
+
+								<div class="has-feedback">
+
+
+									供应商名称:<input>
+
+									供应商类型 <input>
+
+									<button class="btn btn-default">查询</button>
+								</div>
+							</div>
+                            <div class="box-tools pull-right">
+                                <div class="has-feedback">
+							                                         
+                                </div>
+                            </div>
+                            <!--工具栏/-->
+
+			                  <!--数据列表-->
+			                  <table id="dataList" class="table table-bordered table-striped table-hover dataTable">
+			                      <thead>
+			                          <tr>
+			                              <th class="" style="padding-right:0px">
+			                                  <input id="selall" type="checkbox" class="icheckbox_square-blue">
+			                              </th> 
+										  <th class="sorting_asc">商品名称</th>
+									      <th class="sorting">采购数量(台)</th>
+									      <th class="sorting">采购单价(元）</th>
+										  <th class="sorting">备注</th>
+										  <th class="sorting">状态</th>
+					                      <th class="text-center">操作</th>
+			                          </tr>
+			                      </thead>
+			                      <tbody>
+			                          <tr>
+			                              <td><input  type="checkbox" ></td>			                              
+				                          <td>手机</td>
+									      <td>100</td>
+		                                  <td>200</td>
+										  <td>畅销类物品，及时采购</td>
+										  <td>已审核</td>
+										  <td class="text-center">
+		                                 	  <button type="button" class="btn bg-olive btn-xs" data-toggle="modal" data-target="#editModal"  >修改</button>                                           
+		                                  </td>
+			                          </tr>
+									  <tr>
+										  <td><input  type="checkbox" ></td>
+										  <td>手机</td>
+										  <td>100</td>
+										  <td>200</td>
+										  <td>畅销类物品，及时采购</td>
+										  <td>已审核</td>
+										  <td class="text-center">
+											  <button type="button" class="btn bg-olive btn-xs" data-toggle="modal" data-target="#editModal"  >修改</button>
+										  </td>
+									  </tr>
+									  <tr>
+										  <td><input  type="checkbox" ></td>
+										  <td>手机</td>
+										  <td>100</td>
+										  <td>200</td>
+										  <td>畅销类物品，及时采购</td>
+										  <td>已审核</td>
+										  <td class="text-center">
+											  <button type="button" class="btn bg-olive btn-xs" data-toggle="modal" data-target="#editModal"  >修改</button>
+										  </td>
+									  </tr>
+			                      </tbody>
+			                  </table>
+			                  <!--数据列表/-->                        
+							  
+							 
+                        </div>
+                        <!-- 数据表格 /-->
+                        <tm-pagination conf="paginationConf"></tm-pagination>
+
+                     </div>
+                    <!-- /.box-body -->
+         
+<!-- 编辑窗口 -->
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" >
+	<div class="modal-content">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			<h3 id="myModalLabel">入库单编辑</h3>
+		</div>
+		<div class="modal-body">		
+			<table class="table table-bordered table-striped"  width="800px">
+		      	<tr>
+		      		<td>商品名称</td>
+		      		<td><input  class="form-control" placeholder="商品名称" >  </td>
+		      	</tr>		      	
+		      	<tr>
+		      		<td>采购数量</td>
+		      		<td><input  class="form-control" placeholder="采购数量">  </td>
+		      	</tr>
+				<tr>
+					<td>采购单价</td>
+					<td><input  class="form-control" placeholder="采购单价">  </td>
+				</tr>
+				<tr>
+					<td>备注</td>
+					<td><input  class="form-control" placeholder="备注">  </td>
+				</tr>
+				<tr>
+					<td>状态</td>
+					<td><input  class="form-control" placeholder="状态">  </td>
+				</tr>
+			</table>
+		</div>
+		<div class="modal-footer">						
+			<button class="btn btn-success" data-dismiss="modal" aria-hidden="true">保存</button>
+			<button class="btn btn-default" data-dismiss="modal" aria-hidden="true">关闭</button>
+		</div>
+	  </div>
+	</div>
+</div>
+   
+</body>
+</html>

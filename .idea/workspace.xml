@@ -1,22 +1,518 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f7815b6d-168d-4ac5-b606-32dd50969dff" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/GoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/GoodsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/ProviderControllre.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/ProviderControllre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/dao/GoodsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/dao/GoodsDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/dao/ProviderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/dao/ProviderDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/entity/Goods.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/entity/Goods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/GoodsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/GoodsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/ProviderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/ProviderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/impl/GoodsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/impl/GoodsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/impl/ProviderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/impl/ProviderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecut-last-project/src/main/resources/mapper/tbl_employeeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/mapper/tbl_employeeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecut-last-project/src/main/resources/mapper/tbl_goodsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/mapper/tbl_goodsMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecut-last-project/src/main/resources/mapper/tbl_providerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/mapper/tbl_providerMapper.xml" afterDir="false" />
+    <list default="true" id="f7815b6d-168d-4ac5-b606-32dd50969dff" name="Default Changelist" comment="Default Changelist">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/57b51ea9Nb862ca5e.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/Logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/01.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/b1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/b2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/b3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/banner.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/buy001.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/buy002.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/buy01.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/car.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/clock.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/code.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/cooperation_banner.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/down-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/dp01.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/dp02.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/dp03.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/dp04.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/empty_heart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/erweima.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/fail.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/gocart.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/gocart01.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/gotop.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/icon-red.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/intro01.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/intro02.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/intro03.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/itemlike01.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/itemlike02.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/itemlike03.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/itemlike04.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/itemlike05.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/itemlike06.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/l-m01.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/list.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/list.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/login-bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/manage-bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/mobile01.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/mobile02.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/mobile03.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/mobile04.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/mobile05.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/mobile06.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/part01.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/part02.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/part03.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/pay1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/pay10.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/pay11.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/pay12.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/pay13.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/pay14.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/pay15.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/pay16.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/pay17.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/pay18.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/pay19.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/pay2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/pay20.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/pay21.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/pay22.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/pay3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/pay4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/pay5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/phone-bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/phone01.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/phone02.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/phone03.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/phone04.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/phone05.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/phone06.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/phone07.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/phone08.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/phone09.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/phone10.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/phone11.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/phone12.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/phone13.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/phone14.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/photo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/photo_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/s1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/s2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/s3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/sampling_head.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/seckillbg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/shi_heart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/shop-intro.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/shop-logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/shop-part.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/t.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/title_bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/_/y24.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/account.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/ad.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/ad1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/ali.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/american-express.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/itemlike/itemlike01.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/itemlike/itemlike02.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/itemlike/itemlike03.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/itemlike/itemlike04.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/itemlike/itemlike05.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/itemlike/itemlike06.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/pay/fail.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/pay/icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/pay/pay1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/pay/pay10.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/pay/pay11.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/pay/pay12.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/pay/pay13.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/pay/pay14.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/pay/pay15.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/pay/pay16.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/pay/pay17.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/pay/pay18.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/pay/pay19.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/pay/pay2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/pay/pay20.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/pay/pay21.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/pay/pay22.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/pay/pay3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/pay/pay4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/pay/pay5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/pay/right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/phone/dp01.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/phone/dp02.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/phone/dp03.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/phone/dp04.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/phone/intro01.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/phone/intro02.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/phone/intro03.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/phone/l-m01.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/phone/mobile01.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/phone/mobile02.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/phone/mobile03.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/phone/mobile04.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/phone/mobile05.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/phone/mobile06.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/phone/part01.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/phone/part02.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/phone/part03.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/phone/phone01.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/phone/phone02.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/phone/phone03.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/phone/phone04.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/phone/phone05.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/phone/phone06.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/phone/phone07.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/phone/phone08.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/phone/phone09.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/phone/phone10.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/phone/phone11.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/phone/phone12.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/phone/phone13.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/phone/phone14.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/success-cart/buy001.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/success-cart/buy002.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/success-cart/buy01.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/success-cart/gocart.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/success-cart/gocart01.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/zoom/b1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/zoom/b2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/zoom/b3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/zoom/s1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/zoom/s2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/assets/img/zoom/s3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/avatar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/avatar04.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/avatar2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/avatar3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/avatar5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/banner1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/banner1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/banner2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/banner3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/banner4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/barrow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/boxed-bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/boxed-bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/brand01.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/brand02.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/brand03.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/brand04.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/brand05.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/brand06.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/brand07.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/brand08.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/brand09.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/brand10.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/brand11.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/brand12.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/brand13.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/brand_03.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/brand_05.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/brand_07.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/brand_09.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/brand_11.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/brand_13.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/brand_15.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/brand_17.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/brand_19.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/brand_21.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/cartPanelViewIcons.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/choosed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/cirrus.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/clock.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/duihuan.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/erweima.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/floor-1-1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/floor-1-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/floor-1-3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/floor-1-4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/floor-1-5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/floor-1-6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/floor-1-b01.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/floor-1-b02.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/floor-1-b03.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/goods.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/icon-red.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/icons.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/interest01.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/interest02.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/interest03.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/interest04.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/interest05.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/interest06.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/like1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/like2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/like3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/like4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/like_01.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/like_02.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/like_03.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/like_04.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/like_05.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/like_06.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/linker.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/lock.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/loginbg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/mastercard.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/mestro.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/mod-list.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/paypal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/paypal2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/phone-bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/photo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/photo1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/photo2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/photo3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/photo4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/qq.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/quan.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/sina.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/today01.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/today02.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/today03.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/today04.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/user1-128x128.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/user2-160x160.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/user3-128x128.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/user4-128x128.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/user5-128x128.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/user6-128x128.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/user7-128x128.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/user8-128x128.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/visa.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/weixin.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/wx_cz.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/img/zoom.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/img/avatar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/img/avatar04.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/img/avatar2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/img/avatar3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/img/avatar5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/img/boxed-bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/img/boxed-bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/img/credit/american-express.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/img/credit/cirrus.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/img/credit/mastercard.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/img/credit/mestro.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/img/credit/paypal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/img/credit/paypal2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/img/credit/visa.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/img/default-50x50.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/img/icons.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/img/photo1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/img/photo2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/img/photo3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/img/photo4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/img/user1-128x128.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/img/user2-160x160.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/img/user3-128x128.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/img/user4-128x128.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/img/user5-128x128.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/img/user6-128x128.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/img/user7-128x128.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/img/user8-128x128.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/bootstrap/fonts/glyphicons-halflings-regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/bootstrap/fonts/glyphicons-halflings-regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/bootstrap/fonts/glyphicons-halflings-regular.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/bootstrap/images/arrows.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2-spinner.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2x2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/wui-DatePicker/css/font/iconfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/wui-DatePicker/css/font/iconfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/wui-DatePicker/css/font/iconfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/Administrator.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/admin/home.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/admin/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/admin/instore.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/css/pages-login-manage.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/css/webbase.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/angular-select2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/base.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/base_pagination.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/controller/baseController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/controller/purchaseOrderController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/pages/addressList.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/pages/city-picker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/pages/getOrderInfo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/pages/home.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/pages/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/pages/jquery.slideunlock.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/pages/login-manage.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/pages/login.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/pages/main.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/pages/person-collect.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/pages/person-footmark.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/pages/register.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/pages/seckill-index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/pages/shop.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/pages/shoplogin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/pages/sm-city-picker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/plugins/birthday/birthday.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/plugins/citypicker/distpicker.data.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/plugins/citypicker/distpicker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/plugins/jquery-placeholder/jquery.placeholder.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/plugins/jquery.easing/jquery.easing.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/plugins/jquery.jqzoom/jquery.jqzoom.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/plugins/jquery.jqzoom/zoom.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/plugins/jquery/jquery.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/plugins/sui/sui.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/plugins/upload/uploadPreview.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/service/purchaseOrderService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/login.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/css/AdminLTE.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/css/AdminLTE.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/css/alt/AdminLTE-bootstrap-social.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/css/alt/AdminLTE-bootstrap-social.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/css/alt/AdminLTE-fullcalendar.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/css/alt/AdminLTE-fullcalendar.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/css/alt/AdminLTE-select2.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/css/alt/AdminLTE-select2.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/css/alt/AdminLTE-without-plugins.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/css/alt/AdminLTE-without-plugins.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/css/skins/_all-skins.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/css/skins/_all-skins.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/css/skins/skin-black-light.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/css/skins/skin-black-light.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/css/skins/skin-black.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/css/skins/skin-black.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/css/skins/skin-blue-light.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/css/skins/skin-blue-light.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/css/skins/skin-blue.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/css/skins/skin-blue.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/css/skins/skin-green-light.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/css/skins/skin-green-light.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/css/skins/skin-green.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/css/skins/skin-green.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/css/skins/skin-purple-light.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/css/skins/skin-purple-light.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/css/skins/skin-purple.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/css/skins/skin-purple.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/css/skins/skin-red-light.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/css/skins/skin-red-light.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/css/skins/skin-red.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/css/skins/skin-red.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/css/skins/skin-yellow-light.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/css/skins/skin-yellow-light.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/css/skins/skin-yellow.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/css/skins/skin-yellow.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/js/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/js/app.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/js/demo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/js/pages/dashboard.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/adminLTE/js/pages/dashboard2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/angularjs/angular-animate.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/angularjs/angular-route.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/angularjs/angular.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/angularjs/pagination.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/angularjs/pagination.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/bootstrap/css/bootstrap-datetimepicker.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/bootstrap/css/bootstrap-theme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/bootstrap/css/bootstrap-theme.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/bootstrap/css/bootstrap-theme.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/bootstrap/css/bootstrap-theme.min.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/bootstrap/css/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/bootstrap/css/bootstrap.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/bootstrap/css/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/bootstrap/css/bootstrap.min.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/bootstrap/fonts/glyphicons-halflings-regular.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/bootstrap/js/bootstrap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/bootstrap/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/bootstrap/js/npm.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/jQuery/jquery-2.2.3.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/angular-select2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/component.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/release.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2-bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2.jquery.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_ar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_bg.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_ca.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_cs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_da.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_de.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_el.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_en.js.template" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_es.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_et.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_eu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_fa.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_fi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_fr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_gl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_he.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_hr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_hu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_id.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_is.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_it.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_ja.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_ka.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_ko.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_lt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_lv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_mk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_ms.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_nl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_no.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_pl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_pt-BR.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_pt-PT.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_ro.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_rs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_ru.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_sk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_sv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_th.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_tr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_uk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_vi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_zh-CN.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/select2/select2_locale_zh-TW.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/wui-DatePicker/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/wui-DatePicker/css/wui.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/wui-DatePicker/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/wui-DatePicker/js/angular.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/wui-DatePicker/js/jquery.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/wui-DatePicker/js/wui-date.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecut-last-project/target/classes/META-INF/ecut-last-project.kotlin_module" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/Application.class" afterPath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/Application.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/filter/LoginFilter.class" afterPath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/filter/LoginFilter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/controller/EmployeeController.class" afterPath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/controller/EmployeeController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/controller/GoodsController.class" afterPath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/controller/GoodsController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/controller/ProviderControllre.class" afterPath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/controller/ProviderControllre.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/dao/EmployeeDao.class" afterPath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/dao/EmployeeDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/dao/GoodsDao.class" afterPath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/dao/GoodsDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/dao/ProviderDao.class" afterPath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/dao/ProviderDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/domain/DoChangFunction.class" afterPath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/domain/DoChangFunction.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/domain/EmployeeForm.class" afterPath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/domain/EmployeeForm.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/domain/ReturnJsonData.class" afterPath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/domain/ReturnJsonData.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/entity/Employee.class" afterPath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/entity/Employee.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/entity/Goods.class" afterPath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/entity/Goods.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/entity/Provider.class" afterPath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/entity/Provider.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/exception/GlobalExceptionHandler.class" afterPath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/exception/GlobalExceptionHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/service/EmployeeService.class" afterPath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/service/EmployeeService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/service/GoodsService.class" afterPath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/service/GoodsService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/service/ProviderService.class" afterPath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/service/ProviderService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/service/impl/EmployeeServiceImpl.class" afterPath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/service/impl/EmployeeServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/service/impl/GoodsServiceImpl.class" afterPath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/service/impl/GoodsServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/service/impl/ProviderServiceImpl.class" afterPath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/service/impl/ProviderServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/utils/CommonUtils.class" afterPath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/utils/CommonUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/EmployeeController.java" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/EmployeeController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecut-last-project/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/application.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecut-last-project/target/classes/application.yml" afterPath="$PROJECT_DIR$/ecut-last-project/target/classes/application.yml" />
     </list>
     <ignored path="$PROJECT_DIR$/ecut-last-project/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,105 +520,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/ProviderService.java">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/wui-DatePicker/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="3614">
+              <caret line="139" column="5" lean-forward="false" selection-start-line="139" selection-start-column="5" selection-end-line="139" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/mapper/tbl_employeeMapper.xml">
+      <file leaf-file-name="npm.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/bootstrap/js/npm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="34" column="15" lean-forward="true" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/mapper/tbl_goodsMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="42" column="36" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/GoodsController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="99" column="31" lean-forward="true" selection-start-line="99" selection-start-column="31" selection-end-line="99" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/entity/Goods.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/GoodsService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="20" column="23" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/dao/GoodsDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="22" column="14" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/impl/GoodsServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#738#739#0" expanded="true" />
-                <element signature="e#782#783#0" expanded="true" />
-                <element signature="e#911#912#0" expanded="true" />
-                <element signature="e#925#926#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/filter/LoginFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="84" column="40" lean-forward="true" selection-start-line="84" selection-start-column="40" selection-end-line="84" selection-end-column="40" />
+            <state relative-caret-position="130">
+              <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -140,6 +553,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -148,7 +566,6 @@
         <option value="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/filter/MyWebConfig.java" />
         <option value="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/exception/GlobalExceptionHandler.java" />
         <option value="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/domain/EmployeeToEmployeeForm.java" />
-        <option value="$PROJECT_DIR$/ecut-last-project/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/config/GlobalCorsConfig.java" />
         <option value="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/filter/RedisConn.java" />
         <option value="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/WarehouseController.java" />
@@ -161,7 +578,6 @@
         <option value="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/EmployeeService.java" />
         <option value="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/dao/EmployeeDao.java" />
         <option value="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/utils/CommonUtils.java" />
-        <option value="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/EmployeeController.java" />
         <option value="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/impl/EmployeeServiceImpl.java" />
         <option value="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/entity/Provider.java" />
         <option value="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/dao/ProviderDao.java" />
@@ -176,8 +592,19 @@
         <option value="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/entity/Goods.java" />
         <option value="$PROJECT_DIR$/ecut-last-project/src/main/resources/mapper/tbl_goodsMapper.xml" />
         <option value="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/GoodsController.java" />
+        <option value="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/service/loginService.js" />
+        <option value="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/controller/loginController.js" />
+        <option value="$PROJECT_DIR$/ecut-last-project/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/EmployeeController.java" />
+        <option value="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/login.html" />
       </list>
     </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -193,154 +620,40 @@
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="ecut-last-project" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="ecut-last-project" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
       </expand>
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="55" />
     <option name="width" value="1250" />
     <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="warehouse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="warehouser" type="b2602c69:ProjectViewProjectNode" />
               <item name="ecut-last-project" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="warehouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ecut-last-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="warehouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ecut-last-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="warehouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ecut-last-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="warehouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ecut-last-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="warehouse" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="warehouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ecut-last-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="warehouse" type="462c0819:PsiDirectoryNode" />
-              <item name="filter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="warehouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ecut-last-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="warehouse" type="462c0819:PsiDirectoryNode" />
-              <item name="warehouse" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="warehouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ecut-last-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="warehouse" type="462c0819:PsiDirectoryNode" />
-              <item name="warehouse" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="warehouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ecut-last-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="warehouse" type="462c0819:PsiDirectoryNode" />
-              <item name="warehouse" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="warehouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ecut-last-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="warehouse" type="462c0819:PsiDirectoryNode" />
-              <item name="warehouse" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="warehouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ecut-last-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="warehouse" type="462c0819:PsiDirectoryNode" />
-              <item name="warehouse" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="warehouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ecut-last-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="warehouse" type="462c0819:PsiDirectoryNode" />
-              <item name="warehouse" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="warehouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ecut-last-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="warehouse" type="462c0819:PsiDirectoryNode" />
-              <item name="warehouse" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="warehouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ecut-last-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="warehouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ecut-last-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -363,14 +676,16 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ProSoftWare\GitCode\warehouser\ecut-last-project\src\main\resources" />
       <recent name="G:\project\iderProject\SpringBootProject\warehouse\ecut-last-project\src\main\java\com\ecut\warehouse\warehouse\config" />
       <recent name="G:\project\iderProject\SpringBootProject\warehouse\ecut-last-project" />
       <recent name="G:\project\iderProject\SpringBootProject\warehouse\ecut-last-project\src\main\java\com\ecut\warehouse\filter" />
       <recent name="G:\project\iderProject\SpringBootProject\warehouse\ecut-last-project\src\main\java\com\ecut\warehouse\warehouse\controller" />
-      <recent name="G:\project\iderProject\SpringBootProject\warehouse\ecut-last-project\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -385,25 +700,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.Application">
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="ecut-last-project" />
-      <extension name="coverage">
+      <extension name="coverage" enabled="false" merge="false" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.ecut.warehouse.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.ecut.warehouse.Application" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+      <module name="ecut-last-project" />
+      <envs />
     </configuration>
     <recent_temporary>
-      <list>
-        <item itemvalue="Spring Boot.Application" />
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Spring Boot.Application" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration>C:\Users\Childwanwan\AppData\Roaming\Subversion</configuration>
@@ -424,380 +740,153 @@
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="55346000" />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31903484" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3186969" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.39858156" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.50441176" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32765958" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" />
-      <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.2533512" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979977" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4310954" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.50208336" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.64782095" sideWeight="0.49791667" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.8975265" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979977" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286219" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25375536" sideWeight="0.49425286" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25375536" sideWeight="0.50574714" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979977" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.50208336" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.54077256" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.048292108" sideWeight="0.49791667" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2473176" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Default Changelist" />
+    <option name="LAST_COMMIT_MESSAGE" value="Default Changelist" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="jar://D:/maven_repository/commons-collections/commons-collections/3.2/commons-collections-3.2.jar!/org/apache/commons/collections/map/AbstractHashedMap.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/maven_repository/commons-collections/commons-collections/3.2/commons-collections-3.2.jar!/org/apache/commons/collections/map/HashedMap.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="e#482#483#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/maven_repository/commons-collections/commons-collections/3.2/commons-collections-3.2.jar!/org/apache/commons/collections/map/MultiKeyMap.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="e#1060#1061#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/maven_repository/net/sf/json-lib/json-lib/2.2.2/json-lib-2.2.2-jdk15.jar!/net/sf/json/processors/JsonValueProcessorMatcher.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/maven_repository/net/sf/json-lib/json-lib/2.2.2/json-lib-2.2.2-jdk15.jar!/net/sf/json/JsonConfig.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="235" selection-start-line="235" selection-end-line="235" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/maven_repository/net/sf/json-lib/json-lib/2.2.2/json-lib-2.2.2-jdk15.jar!/net/sf/json/JSONNull.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#323#324#0" expanded="true" />
-            <element signature="e#354#355#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/maven_repository/commons-collections/commons-collections/3.2/commons-collections-3.2.jar!/org/apache/commons/collections/keyvalue/AbstractMapEntry.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#325#326#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/maven_repository/commons-collections/commons-collections/3.2/commons-collections-3.2.jar!/org/apache/commons/collections/iterators/AbstractIteratorDecorator.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="e#630#631#0" expanded="true" />
-            <element signature="e#676#677#0" expanded="true" />
-            <element signature="e#747#748#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/maven_repository/commons-collections/commons-collections/3.2/commons-collections-3.2.jar!/org/apache/commons/collections/keyvalue/AbstractKeyValue.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#497#498#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/maven_repository/commons-collections/commons-collections/3.2/commons-collections-3.2.jar!/org/apache/commons/collections/map/ListOrderedMap.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="420" selection-start-line="420" selection-end-line="420" />
-          <folding>
-            <element signature="e#0#13280#0" expanded="true" />
-            <element signature="e#3706#3707#0" expanded="true" />
-            <element signature="e#3764#3765#0" expanded="true" />
-            <element signature="e#4069#4070#0" expanded="true" />
-            <element signature="e#4147#4148#0" expanded="true" />
-            <element signature="e#11404#11405#0" expanded="true" />
-            <element signature="e#11504#11505#0" expanded="true" />
-            <element signature="e#11651#11652#0" expanded="true" />
-            <element signature="e#11695#11696#0" expanded="true" />
-            <element signature="e#12197#12198#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/maven_repository/net/sf/json-lib/json-lib/2.2.2/json-lib-2.2.2-jdk15.jar!/net/sf/json/util/JSONUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="290" selection-start-line="290" selection-end-line="290" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/maven_repository/commons-collections/commons-collections/3.2/commons-collections-3.2.jar!/org/apache/commons/collections/map/AbstractMapDecorator.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-          <folding>
-            <element signature="e#1030#1031#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/maven_repository/net/sf/json-lib/json-lib/2.2.2/json-lib-2.2.2-jdk15.jar!/net/sf/json/JSONObject.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="1654" selection-start-line="1654" selection-end-line="1654" />
-          <folding>
-            <element signature="e#70532#70533#0" expanded="true" />
-            <element signature="e#70570#70571#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/config/GlobalCorsConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="50" lean-forward="true" selection-start-line="29" selection-end-line="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/maven_repository/redis/clients/jedis/2.9.0/jedis-2.9.0.jar!/redis/clients/jedis/Client.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="e#909#910#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/maven_repository/redis/clients/jedis/2.9.0/jedis-2.9.0.jar!/redis/clients/util/SafeEncoder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/maven_repository/redis/clients/jedis/2.9.0/jedis-2.9.0.jar!/redis/clients/util/RedisOutputStream.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#1660#1661#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/maven_repository/redis/clients/jedis/2.9.0/jedis-2.9.0.jar!/redis/clients/util/RedisInputStream.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="e#754#755#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/maven_repository/redis/clients/jedis/2.9.0/jedis-2.9.0.jar!/redis/clients/jedis/Connection.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="128" selection-start-line="128" selection-end-line="128" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/maven_repository/redis/clients/jedis/2.9.0/jedis-2.9.0.jar!/redis/clients/jedis/Protocol.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="83" selection-start-line="83" selection-end-line="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/maven_repository/redis/clients/jedis/2.9.0/jedis-2.9.0.jar!/redis/clients/jedis/BinaryClient.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="84" selection-start-line="84" selection-end-line="84" />
-          <folding>
-            <element signature="e#986#987#0" expanded="true" />
-            <element signature="e#1019#1020#0" expanded="true" />
-            <element signature="e#1405#1406#0" expanded="true" />
-            <element signature="e#1442#1443#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/maven_repository/redis/clients/jedis/2.9.0/jedis-2.9.0.jar!/redis/clients/jedis/BinaryJedis.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="82">
-          <caret line="768" selection-start-line="768" selection-end-line="768" />
-          <folding>
-            <element signature="e#1835#1836#0" expanded="true" />
-            <element signature="e#1887#1888#0" expanded="true" />
-          </folding>
+          <caret line="768" column="0" lean-forward="false" selection-start-line="768" selection-start-column="0" selection-end-line="768" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="jar://D:/maven_repository/redis/clients/jedis/2.9.0/jedis-2.9.0.jar!/redis/clients/jedis/Jedis.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="446">
-          <caret line="119" selection-start-line="119" selection-end-line="119" />
-          <folding>
-            <element signature="e#1350#1351#0" expanded="true" />
-            <element signature="e#1383#1384#0" expanded="true" />
-          </folding>
+          <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/filter/RedisConn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#508#509#0" expanded="true" />
-            <element signature="e#561#562#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/domain/DoChangFunction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="22" column="46" lean-forward="true" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/filter/RedisConn.java" />
     <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/domain/EmployeeForm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="355">
-          <caret line="47" column="19" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+          <caret line="47" column="19" lean-forward="false" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/config/RedisSessionConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ecut-last-project/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2044">
-          <caret line="73" column="12" selection-start-line="73" selection-start-column="12" selection-end-line="73" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/domain/ReturnJsonData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-328">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/dao/EmployeeDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/EmployeeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="20" column="26" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="73" column="12" lean-forward="false" selection-start-line="73" selection-start-column="12" selection-end-line="73" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/impl/EmployeeServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="344">
-          <caret line="46" column="18" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1092#1093#0" expanded="true" />
-            <element signature="e#1107#1108#0" expanded="true" />
-            <element signature="e#1200#1201#0" expanded="true" />
-            <element signature="e#1218#1219#0" expanded="true" />
-            <element signature="e#1316#1317#0" expanded="true" />
-            <element signature="e#1331#1332#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/utils/CommonUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="48" column="11" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
+          <caret line="46" column="18" lean-forward="false" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -805,80 +894,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/EmployeeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="140" column="6" lean-forward="true" selection-start-line="140" selection-start-column="6" selection-end-line="140" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/dao/ProviderDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
-          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="21" column="46" lean-forward="false" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/impl/ProviderServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="222">
-          <caret line="36" column="38" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#515#516#0" expanded="true" />
-            <element signature="e#533#534#0" expanded="true" />
-            <element signature="e#912#913#0" expanded="true" />
-            <element signature="e#927#928#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/ProviderControllre.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1296">
-          <caret line="138" column="5" lean-forward="true" selection-start-line="111" selection-start-column="4" selection-end-line="138" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/ProviderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/GoodsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="20" column="23" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/entity/Employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1204">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="36" column="38" lean-forward="false" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -889,68 +918,280 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/mapper/tbl_employeeMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="34" column="15" lean-forward="true" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/dao/GoodsDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="22" column="14" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/entity/Goods.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/mapper/tbl_goodsMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="42" column="36" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/GoodsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="99" column="31" lean-forward="true" selection-start-line="99" selection-start-column="31" selection-end-line="99" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="1092">
+          <caret line="42" column="36" lean-forward="false" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/impl/GoodsServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        <state relative-caret-position="338">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/mapper/tbl_employeeMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/entity/Goods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/dao/GoodsDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/dao/DamageDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/entity/Damage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/ProviderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="20" column="46" lean-forward="true" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/DamageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/EmployeeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="20" column="26" lean-forward="false" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/GoodsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/pages/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/domain/DoChangFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="19" column="40" lean-forward="true" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/utils/CommonUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/domain/ReturnJsonData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-394">
+          <caret line="24" column="49" lean-forward="true" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/GoodsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="99" column="31" lean-forward="false" selection-start-line="99" selection-start-column="31" selection-end-line="99" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/ProviderControllre.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2938">
+          <caret line="125" column="33" lean-forward="false" selection-start-line="125" selection-start-column="33" selection-end-line="125" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/DamageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1612">
+          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/maven_repository/org/springframework/spring-web/5.0.4.RELEASE/spring-web-5.0.4.RELEASE.jar!/org/springframework/http/ResponseEntity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3224">
+          <caret line="22" column="11" lean-forward="false" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/dao/EmployeeDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="26" column="46" lean-forward="false" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#738#739#0" expanded="true" />
-            <element signature="e#782#783#0" expanded="true" />
-            <element signature="e#911#912#0" expanded="true" />
-            <element signature="e#925#926#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#508#509#0" expanded="false" />
+            <element signature="e#561#562#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/service/loginService.js" />
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/static/admin/instore.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4453">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/static/admin/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6463">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/static/admin/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3465">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/static/css/pages-login-manage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/angular-select2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/base_pagination.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/controller/purchaseOrderController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2028">
+          <caret line="78" column="0" lean-forward="true" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/service/purchaseOrderService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" column="42" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/controller/loginController.js" />
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/controller/baseController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="3" column="15" lean-forward="true" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="36" lean-forward="false" selection-start-line="0" selection-start-column="36" selection-end-line="0" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/EmployeeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="73" column="29" lean-forward="true" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/entity/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1001">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/filter/LoginFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="84" column="40" lean-forward="true" selection-start-line="84" selection-start-column="40" selection-end-line="84" selection-end-column="40" />
+        <state relative-caret-position="337">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1014">
+          <caret line="39" column="78" lean-forward="false" selection-start-line="39" selection-start-column="78" selection-end-line="39" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/static/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="58" column="92" lean-forward="true" selection-start-line="58" selection-start-column="92" selection-end-line="58" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/wui-DatePicker/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3614">
+          <caret line="139" column="5" lean-forward="false" selection-start-line="139" selection-start-column="5" selection-end-line="139" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/static/plugins/bootstrap/js/npm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
