@@ -23,10 +23,10 @@
     <update id="updateEmployee" parameterType="com.ecut.warehouse.warehouse.entity.Employee">
         UPDATE tbl_employee
         <set>
-            <if test="employeeName!=null ">employee_name=#{employeeName},</if>
-            <if test="telephone!=null ">telephone=#{telephone},</if>
-            <if test="addr!=null ">addr=#{addr},</if>
-            <if test="status!=null ">status=#{status}</if>
+            <if test="employeeName!=null and employeeName != ''">employee_name=#{employeeName},</if>
+            <if test="telephone!=null and telephone != ''">telephone=#{telephone},</if>
+            <if test="addr!=null and addr != ''">addr=#{addr},</if>
+            <if test="status!=null and status != ''">status=#{status}</if>
         </set>
         WHERE id = #{id}
     </update>

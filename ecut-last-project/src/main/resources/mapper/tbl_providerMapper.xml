@@ -43,4 +43,27 @@
          VALUES
         (#{id}, #{providerType},#{providerName}, #{linkman}, #{telephone},#{addr},#{status})
     </insert>
+
+
+
+
+
+
+
+
+
+
+    <!--更新操作-->
+    <update id="updateProvider" parameterType="com.ecut.warehouse.warehouse.entity.Provider">
+        UPDATE tbl_provider
+        <set>
+            <if test="providerType!=null and providerType != ''">provider_type=#{providerType},</if>
+            <if test="providerName!=null and providerName !=''">provider_name=#{providerName},</if>
+            <if test="linkman!=null and linkman!='' ">linkman=#{linkman},</if>
+            <if test="telephone!=null and telephone !=''">telephone=#{telephone},</if>
+            <if test="addr!=null and addr != ''">addr=#{addr},</if>
+            <if test="status!=null">status=#{status}</if>
+        </set>
+        WHERE id = #{id}
+    </update>
 </mapper>

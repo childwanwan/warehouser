@@ -9,6 +9,7 @@ import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.text.SimpleDateFormat;
@@ -26,6 +27,7 @@ public class DamageController {
     private DamageService damageService;
 
     //新增报损单
+    @Transactional
     @RequestMapping(value = "/report", method = RequestMethod.POST)
     public ResponseEntity<JSONObject> damage( @RequestBody JSONObject jsonObject){
         //1.定义全局变量

@@ -36,4 +36,9 @@ public class ProviderServiceImpl implements ProviderService {
 	public int addProvider(Provider provider) {
 		return providerDao.addProvider(provider);
 	}
+
+	@Override
+	public int updateProvider(Provider provider) {
+		return providerDao.updateProvider(provider);
+	}
 }

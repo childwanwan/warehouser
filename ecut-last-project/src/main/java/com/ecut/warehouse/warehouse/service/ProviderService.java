@@ -19,4 +19,5 @@ public interface ProviderService {
 	public List<Provider> queryProvider();
 	public List<Provider> getProviderByCondition(Provider provider);
 	public int addProvider(Provider provider);
+	public int updateProvider(Provider provider);
 }

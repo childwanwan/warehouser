@@ -137,4 +137,36 @@ public class ProviderControllre {
 		//获取参数，及将参数封装成对象
 		return new ResponseEntity<>(returnJson, HttpStatus.ACCEPTED);
 	}
+
+
+
+
+	/*
+	 * @Author:Childwanwan
+	 * @Description:更新供应商
+	 * @Para:* @param
+	 * @data:2019/3/17  22:50
+	 */
+	@RequestMapping(value = "/provider/updateProvider", method = RequestMethod.POST)
+	public ResponseEntity<JSONObject> updateProvider(@RequestBody Provider provider) {
+		//定义返回的json
+		JSONObject returnJson = new JSONObject();
+		if (null==provider.getId()||"".equals(provider.getId())){
+			provider.setId(CommonUtils.getUUID());
+		}
+		if (null==provider.getStatus()||"".equals(provider.getStatus())){
+			provider.setStatus(0);
+		}
+		int i = 0;
+		try{
+			i = providerService.updateProvider(provider);
+		}catch (Exception e){
+			returnJson= ReturnJsonData.returnJsonFunction(ReturnJsonData.SYS_ERROR);
+		}
+		if (i>0){
+			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.OK);
+		}
+		//获取参数，及将参数封装成对象
+		return new ResponseEntity<>(returnJson, HttpStatus.ACCEPTED);
+	}
 }

@@ -170,8 +170,8 @@ public class EmployeeController {
 
 	/*
 	 * @Author:Childwanwan
-	 * @Description:根据id获取职工信息
-	 * @Para:* @param 根据id获取职工信息
+	 * @Description:添加employee
+	 * @Para:* @param
 	 * @data:2019/3/17  22:50
 	 */
 	@RequestMapping(value = "/employee/addEmployee", method = RequestMethod.POST)

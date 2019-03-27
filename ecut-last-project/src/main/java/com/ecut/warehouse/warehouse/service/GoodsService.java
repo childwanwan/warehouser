@@ -19,4 +19,8 @@ public interface GoodsService {
 	public List<Goods> getGoodsExceptError();
 
 	public int addGoods(Goods goods);
+
+	public int updateGoods(Goods goods);
+
+	public Goods getGoodsById(Goods goods);
 }
