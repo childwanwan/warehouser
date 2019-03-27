@@ -21,6 +21,14 @@
         where status !=9999 and status !=2
     </select>
 
+    <!--根据id查询goods-->
+    <select id="getGoodsById" resultType="com.ecut.warehouse.warehouse.entity.Goods">
+        SELECT   id,goods_code,goods_name,specification_items,custom_attribute_items,status,
+        comment,goods_type,goods_num
+        FROM tbl_goods
+        where status !=9999 and id = #{id}
+    </select>
+
     <!--增加操作-->
     <insert id="addGoods"  parameterType="com.ecut.warehouse.warehouse.entity.Goods" >
         insert into tbl_goods
@@ -83,5 +91,23 @@
             </if>
         </trim>
     </insert>
+
+
+
+    <!--更新操作-->
+    <update id="updateGoods" parameterType="com.ecut.warehouse.warehouse.entity.Goods">
+        UPDATE tbl_goods
+        <set>
+            <if test="goodsCode!=null and goodsCode != ''">goods_code=#{goodsCode},</if>
+            <if test="goodsName!=null and goodsName !=''">goods_name=#{goodsName},</if>
+            <if test="specificationItems!=null and specificationItems!='' ">specification_items=#{specificationItems},</if>
+            <if test="customAttributeItems!=null and customAttributeItems !=''">custom_attribute_items=#{customAttributeItems},</if>
+            <if test="status!=null ">status=#{status},</if>
+            <if test="comment!=null and comment !=''">comment=#{comment},</if>
+            <if test="goodsType!=null and goodsType !=''">goods_type=#{goodsType},</if>
+            <if test="goodsNum!=null">goods_num=#{goodsNum}</if>
+        </set>
+        WHERE id = #{id}
+    </update>
 
 </mapper>

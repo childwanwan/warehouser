@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecut.warehouse.warehouse.dao.DamageDao">
+
+    <!--插入中间表操作 由于是多参数那么就不能使用parameterType， 改用#｛index｝是第几个就用第几个的索引，索引从0开始-->
+    <insert id="insertGoodDamageRel" parameterType="java.lang.String">
+        INSERT INTO tbl_damage_goods_rel(good_id, damage_id)
+        VALUES (#{goodId}, #{damageId})
+    </insert>
+
+</mapper>
