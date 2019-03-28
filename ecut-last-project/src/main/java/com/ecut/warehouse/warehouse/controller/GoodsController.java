@@ -171,4 +171,33 @@ public class GoodsController {
 		//返回
 		return new ResponseEntity<>(returnJson, HttpStatus.ACCEPTED);
 	}
+
+
+
+	/*
+	 * @Author:Childwanwan
+	 * @Description:根据goodsCode查询goods
+	 * @Para:Id
+	 * @data:2019/3/17  22:50
+	 */
+	@RequestMapping(value = "/goods/getGoodsByGoodsCode", method = RequestMethod.GET)
+	public ResponseEntity<JSONObject> getGoodsByGoodsCode(@RequestParam String goodsCode) {
+		//定义返回的json
+		JSONObject returnJson = new JSONObject();
+		Goods good = new Goods();
+		if (null != goodsCode && !"".equals(goodsCode)) {
+			good.setGoodsCode(goodsCode);
+		}
+		try {
+			good = goodsService.getGoodsByGoodsCode(good);
+		} catch (Exception e) {
+			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.SYS_ERROR);
+		}
+		if (null != good && !"".equals(good)) {
+			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.OK);
+			returnJson.put("data", good);
+		}
+		//返回
+		return new ResponseEntity<>(returnJson, HttpStatus.ACCEPTED);
+	}
 }

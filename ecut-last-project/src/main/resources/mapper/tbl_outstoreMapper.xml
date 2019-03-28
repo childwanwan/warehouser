@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecut.warehouse.warehouse.dao.OutstoreDao">
+    <!--增加操作-->
+    <insert id="addOutstore"  parameterType="com.ecut.warehouse.warehouse.entity.Outstore" >
+        insert into tbl_outstore (id, create_time, outstore_time, total_num, status, provider_id, reserve_id)
+        VALUES (#{id}, #{createTime}, #{outstoreTime}, #{totalNum}, #{status}, #{providerId}, #{reserveId})
+    </insert>
+</mapper>

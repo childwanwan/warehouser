@@ -23,4 +23,5 @@ public interface GoodsDao {
 	public int addGoods(Goods goods);
 	public int updateGoods(Goods goods);
 	public Goods getGoodsById(Goods goods);
+	public Goods getGoodsByGoodsCode(Goods goods);
 }

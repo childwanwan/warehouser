@@ -9,7 +9,7 @@
         SELECT   id,goods_code,goods_name,specification_items,custom_attribute_items,status,
         comment,goods_type,goods_num
         FROM tbl_goods
-        where status !=9999
+        where status !=9999 and goods_num != 0
     </select>
 
 
@@ -18,7 +18,7 @@
         SELECT   id,goods_code,goods_name,specification_items,custom_attribute_items,status,
         comment,goods_type,goods_num
         FROM tbl_goods
-        where status !=9999 and status !=2
+        where status !=9999 and status !=2 and goods_num != 0
     </select>
 
     <!--根据id查询goods-->
@@ -26,7 +26,15 @@
         SELECT   id,goods_code,goods_name,specification_items,custom_attribute_items,status,
         comment,goods_type,goods_num
         FROM tbl_goods
-        where status !=9999 and id = #{id}
+        where status !=9999 and id = #{id} and goods_num != 0
+    </select>
+
+    <!--根据goodsCode查询goods-->
+    <select id="getGoodsByGoodsCode" resultType="com.ecut.warehouse.warehouse.entity.Goods">
+        SELECT   id,goods_code,goods_name,specification_items,custom_attribute_items,status,
+        comment,goods_type,goods_num
+        FROM tbl_goods
+        where status !=9999 and goods_code = #{goodsCode} and goods_num != 0
     </select>
 
     <!--增加操作-->

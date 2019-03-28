@@ -6,13 +6,12 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
 import javax.persistence.Table;
-import java.util.Date;
 
 /**
  * Copyright (C), 2019-2019, 思特奇
- * FileName: Instore
+ * FileName: outstoreItems
  * Author:   wanpp
- * Date:     2019/3/27 18:26
+ * Date:     2019/3/28 18:37
  * Description:
  * History:
  */
@@ -20,17 +19,18 @@ import java.util.Date;
 @Accessors(chain = true)
 @NoArgsConstructor                       //无参构造
 @AllArgsConstructor
-@Table(name="tbl_instore")
-public class Instore {
+@Table(name="tbl_outstore_items")
+public class OutstoreItems {
 	private String id;
-	//入库人id
-	private String provideId;
-	//入库日期
-	private Date instoreTime;
-	//数量合计
-	private Integer totalNum;
-	//状态
+	//出库id
+	private String outstoreId;
+	//商品id
+	private String goodsId;
+	//状态，默认0，删除9999
 	private Integer status;
-	//接收人id
-	private String reserverId;
+	//出库数量
+	private Integer sellNum;
+	//备注
+	private String comment;
+
 }

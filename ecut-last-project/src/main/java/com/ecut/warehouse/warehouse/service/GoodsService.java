@@ -23,4 +23,6 @@ public interface GoodsService {
 	public int updateGoods(Goods goods);
 
 	public Goods getGoodsById(Goods goods);
+
+	public Goods getGoodsByGoodsCode(Goods goods);
 }
