@@ -105,13 +105,13 @@ public class OutstoreController {
 		//定义返回的json
 		JSONObject returnJson = new JSONObject();
 
-		Outstore ParaOutstore = new Outstore();
-		ParaOutstore.setId(id);
+		Outstore paraOutstore = new Outstore();
+		paraOutstore.setId(id);
 
 		Outstore resultOutstore = new Outstore();
 
 		try {
-			resultOutstore = outstoreService.getOutstoresById(ParaOutstore);
+			resultOutstore = outstoreService.getOutstoresById(paraOutstore);
 		}catch (Exception e){
 			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.SYS_ERROR);
 		}
@@ -155,6 +155,36 @@ public class OutstoreController {
 
 		if (resultInfect > 0){
 			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.OK);
+		}else {
+			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.DATA_ERROR);
+		}
+
+		//获取参数，及将参数封装成对象
+		return new ResponseEntity<>(returnJson, HttpStatus.ACCEPTED);
+	}
+
+
+	@RequestMapping(value = "/outstore/getOutstoresGoodsByOutstoresId", method = RequestMethod.GET)
+	public ResponseEntity<JSONObject> getOutstoresGoodsByOutstoresId(@RequestParam String id) {
+
+		//定义返回的json
+		JSONObject returnJson = new JSONObject();
+
+		OutstoreItems paraOutstoreItems = new OutstoreItems();
+		paraOutstoreItems.setOutstoreId(id);
+
+
+		List<OutstoreItems> returnList = new ArrayList<>();
+
+		try {
+			returnList = outstoreItemsService.getOutstoresGoodsByOutstoresId(paraOutstoreItems);
+		}catch (Exception e){
+			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.SYS_ERROR);
+		}
+
+		if (null!=returnList&&!"".equals(returnList)){
+			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.OK);
+			returnJson.put("data",returnList);
 		}else {
 			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.DATA_ERROR);
 		}

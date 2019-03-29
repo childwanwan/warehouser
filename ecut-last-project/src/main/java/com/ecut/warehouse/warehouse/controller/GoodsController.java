@@ -5,6 +5,7 @@ import com.ecut.warehouse.warehouse.entity.Goods;
 import com.ecut.warehouse.warehouse.service.GoodsService;
 import com.ecut.warehouse.warehouse.service.impl.GoodsServiceImpl;
 import com.ecut.warehouse.warehouse.utils.CommonUtils;
+import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

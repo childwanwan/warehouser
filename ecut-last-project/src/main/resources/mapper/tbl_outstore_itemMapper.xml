@@ -8,4 +8,11 @@
         VALUES (#{id}, #{outstoreId}, #{goodsId}, #{status}, #{sellNum}, #{comment})
     </insert>
 
+    <!--根据出库单查询items-->
+    <select id="getOutstoresGoodsByOutstoresId" resultType="com.ecut.warehouse.warehouse.entity.OutstoreItems">
+        SELECT   id, outstore_id, goods_id, status, sell_num, comment
+        FROM tbl_outstore_items
+        where status !=9999 and outstore_id = #{outstoreId}
+    </select>
+
 </mapper>

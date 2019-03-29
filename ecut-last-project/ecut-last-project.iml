@@ -106,5 +106,6 @@
     <orderEntry type="library" name="Maven: org.springframework.session:spring-session-data-redis:2.0.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.session:spring-session-core:2.0.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-jcl:5.0.4.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.56" level="project" />
   </component>
 </module>

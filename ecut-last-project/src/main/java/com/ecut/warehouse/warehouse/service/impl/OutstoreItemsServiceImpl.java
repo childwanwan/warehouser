@@ -7,6 +7,8 @@ import com.ecut.warehouse.warehouse.service.OutstoreService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Copyright (C), 2019-2019, 思特奇
  * FileName: OutstoreItemsServiceImpl
@@ -24,5 +26,10 @@ public class OutstoreItemsServiceImpl implements OutstoreItemsService {
 	@Override
 	public int addOutstoreItem(OutstoreItems outstoreItems) {
 		return outstoreItemsDao.addOutstoreItem(outstoreItems);
+	}
+
+	@Override
+	public List<OutstoreItems> getOutstoresGoodsByOutstoresId(OutstoreItems outstoreItems) {
+		return outstoreItemsDao.getOutstoresGoodsByOutstoresId(outstoreItems);
 	}
 }

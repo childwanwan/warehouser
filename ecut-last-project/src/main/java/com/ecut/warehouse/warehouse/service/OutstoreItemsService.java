@@ -2,6 +2,8 @@ package com.ecut.warehouse.warehouse.service;
 
 import com.ecut.warehouse.warehouse.entity.OutstoreItems;
 
+import java.util.List;
+
 /**
  * Copyright (C), 2015-2019, XXX有限公司
  * FileName: OutstoreItemsService
@@ -15,4 +17,5 @@ import com.ecut.warehouse.warehouse.entity.OutstoreItems;
 
 public interface OutstoreItemsService {
 	public int addOutstoreItem(OutstoreItems outstoreItems);
+	public List<OutstoreItems> getOutstoresGoodsByOutstoresId(OutstoreItems outstoreItems);
 }

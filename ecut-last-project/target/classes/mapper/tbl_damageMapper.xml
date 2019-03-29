@@ -111,4 +111,47 @@
         order by create_time
     </select>
 
+    <select id="queryById" parameterType="java.lang.String" resultType="com.ecut.warehouse.warehouse.entity.Damage">
+        select
+        <include refid="baseList"/>
+        from tbl_damage
+        where id = #{damageId}
+    </select>
+
+    <update id="updateStatus" >
+        update tbl_damage
+        set status = #{status,jdbcType=INTEGER}
+        where id = #{damageId,jdbcType=VARCHAR}
+    </update>
+
+    <update id="updateDamage" parameterType="com.ecut.warehouse.warehouse.entity.Damage">
+        update tbl_damage
+        <set>
+            <if test="deep != null and deep != ''">
+                deep = #{deep,jdbcType=VARCHAR},
+            </if>
+            <if test="damageName != null and damageName != ''">
+                damage_name = #{damageName,jdbcType=VARCHAR},
+            </if>
+            <if test="damageType != null and damageType != ''">
+                damage_type = #{damageType,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=DATE},
+            </if>
+            <if test="approvalTime != null">
+                approval_time = #{approvalTime,jdbcType=DATE},
+            </if>
+            <if test="comment != null and comment != ''">
+                comment = #{comment,jdbcType=VARCHAR},
+            </if>
+            <if test="createPersonId != null and createPersonId != ''">
+                create_person_id = #{createPersonId,jdbcType=VARCHAR},
+            </if>
+            <if test="checkPersonId != null and checkPersonId != ''">
+                check_person_id = #{checkPersonId,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id} and status != 9999
+    </update>
 </mapper>
