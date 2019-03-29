@@ -62,4 +62,104 @@ public class OutstoreController {
 		//获取参数，及将参数封装成对象
 		return new ResponseEntity<>(returnJson, HttpStatus.ACCEPTED);
 	}
+
+	/*
+	 * @Author: wanpp
+	 * @Description:获取出库单
+	 * @param: []
+	 * @Return: org.springframework.http.ResponseEntity<net.sf.json.JSONObject>
+	 * @date: 2019/3/29  8:41
+	 */
+	@RequestMapping(value = "/outstore/getOutstores", method = RequestMethod.GET)
+	public ResponseEntity<JSONObject> getOutstores() {
+
+		//定义返回的json
+		JSONObject returnJson = new JSONObject();
+
+		List<Outstore> listOutstore = new ArrayList<>();
+
+		listOutstore = outstoreService.getOutstores();
+
+		if (null!=listOutstore&&!"".equals(listOutstore)){
+			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.OK);
+			returnJson.put("data",listOutstore);
+		}else {
+			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.DATA_ERROR);
+		}
+
+		//获取参数，及将参数封装成对象
+		return new ResponseEntity<>(returnJson, HttpStatus.ACCEPTED);
+	}
+
+
+	/*
+	 * @Author: wanpp
+	 * @Description:获取出库单
+	 * @param: []
+	 * @Return: org.springframework.http.ResponseEntity<net.sf.json.JSONObject>
+	 * @date: 2019/3/29  8:41
+	 */
+	@RequestMapping(value = "/outstore/getOutstoresById", method = RequestMethod.GET)
+	public ResponseEntity<JSONObject> getOutstoresById(@RequestParam String id) {
+
+		//定义返回的json
+		JSONObject returnJson = new JSONObject();
+
+		Outstore ParaOutstore = new Outstore();
+		ParaOutstore.setId(id);
+
+		Outstore resultOutstore = new Outstore();
+
+		try {
+			resultOutstore = outstoreService.getOutstoresById(ParaOutstore);
+		}catch (Exception e){
+			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.SYS_ERROR);
+		}
+
+		if (null!=resultOutstore&&!"".equals(resultOutstore)){
+			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.OK);
+			returnJson.put("data",resultOutstore);
+		}else {
+			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.DATA_ERROR);
+		}
+
+		//获取参数，及将参数封装成对象
+		return new ResponseEntity<>(returnJson, HttpStatus.ACCEPTED);
+	}
+
+	/*
+	 * @Author: wanpp
+	 * @Description:删除出库单
+	 * @param: [id]
+	 * @Return: org.springframework.http.ResponseEntity<net.sf.json.JSONObject>
+	 * @date: 2019/3/29  10:17
+	 */
+	@RequestMapping(value = "/outstore/deleteOutstoresById", method = RequestMethod.GET)
+	public ResponseEntity<JSONObject> deleteOutstoresById(@RequestParam String id) {
+
+		//定义返回的json
+		JSONObject returnJson = new JSONObject();
+
+		Outstore paraOutstore = new Outstore();
+		paraOutstore.setId(id);
+		paraOutstore.setStatus(9999);
+
+
+		int resultInfect = 0;
+
+		try {
+			resultInfect = outstoreService.deleteOutstoresById(paraOutstore);
+		}catch (Exception e){
+			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.SYS_ERROR);
+		}
+
+		if (resultInfect > 0){
+			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.OK);
+		}else {
+			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.DATA_ERROR);
+		}
+
+		//获取参数，及将参数封装成对象
+		return new ResponseEntity<>(returnJson, HttpStatus.ACCEPTED);
+	}
 }

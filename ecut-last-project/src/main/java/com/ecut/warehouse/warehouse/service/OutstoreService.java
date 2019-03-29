@@ -3,6 +3,8 @@ package com.ecut.warehouse.warehouse.service;
 import com.ecut.warehouse.warehouse.entity.Outstore;
 import net.sf.json.JSONObject;
 
+import java.util.List;
+
 /**
  * Copyright (C), 2015-2019, XXX有限公司
  * FileName: InstoreService
@@ -17,4 +19,7 @@ import net.sf.json.JSONObject;
 public interface OutstoreService {
 	public int addOutstore(Outstore outstore);
 	public boolean outstoreLogic(JSONObject jsonObject);
+	public List<Outstore> getOutstores();
+	public Outstore getOutstoresById(Outstore outstore);
+	public int deleteOutstoresById(Outstore outstore);
 }

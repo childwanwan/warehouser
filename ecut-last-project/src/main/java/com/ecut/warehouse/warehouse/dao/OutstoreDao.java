@@ -3,6 +3,8 @@ package com.ecut.warehouse.warehouse.dao;
 import com.ecut.warehouse.warehouse.entity.Outstore;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 /**
  * Copyright (C), 2015-2019, XXX有限公司
  * FileName: InstoreDao
@@ -16,4 +18,7 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface OutstoreDao {
 	public int addOutstore(Outstore outstore);
+	public List<Outstore> getOutstores();
+	public Outstore getOutstoresById(Outstore outstore);
+	public int deleteOutstoresById(Outstore outstore);
 }

@@ -8,4 +8,33 @@
         insert into tbl_outstore (id, create_time, outstore_time, total_num, status, provider_id, reserve_id)
         VALUES (#{id}, #{createTime}, #{outstoreTime}, #{totalNum}, #{status}, #{providerId}, #{reserveId})
     </insert>
+
+    <!--查询所有的出库单-->
+    <select id="getOutstores" resultType="com.ecut.warehouse.warehouse.entity.Outstore">
+        SELECT   id, create_time, outstore_time, total_num, status, provider_id, reserve_id
+        FROM tbl_outstore
+        where status !=9999 and total_num != 0
+    </select>
+
+    <!--根据id查询出库单-->
+    <select id="getOutstoresById" resultType="com.ecut.warehouse.warehouse.entity.Outstore" parameterType="com.ecut.warehouse.warehouse.entity.Outstore" >
+        SELECT   id, create_time, outstore_time, total_num, status, provider_id, reserve_id
+        FROM tbl_outstore
+        where status !=9999 and total_num != 0 and id = #{id}
+    </select>
+
+
+    <!--更新操作-->
+    <update id="deleteOutstoresById" parameterType="com.ecut.warehouse.warehouse.entity.Outstore">
+        UPDATE tbl_outstore
+        <set>
+            <if test="createTime!=null and createTime != ''">create_time=#{createTime},</if>
+            <if test="outstoreTime!=null and outstoreTime !=''">outstore_time=#{outstoreTime},</if>
+            <if test="totalNum!=null">total_num=#{totalNum},</if>
+            <if test="status!=null ">status=#{status},</if>
+            <if test="providerId!=null and providerId !=''">provider_id=#{providerId},</if>
+            <if test="reserveId!=null and reserveId !=''">reserve_id=#{reserveId}</if>
+        </set>
+        WHERE id = #{id}
+    </update>
 </mapper>

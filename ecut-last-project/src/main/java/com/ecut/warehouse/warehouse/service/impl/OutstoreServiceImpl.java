@@ -149,4 +149,19 @@ public class OutstoreServiceImpl implements OutstoreService {
 		}
 		return returnBoolean;
 	}
+
+	@Override
+	public List<Outstore> getOutstores() {
+		return outstoreDao.getOutstores();
+	}
+
+	@Override
+	public Outstore getOutstoresById(Outstore outstore) {
+		return outstoreDao.getOutstoresById(outstore);
+	}
+
+	@Override
+	public int deleteOutstoresById(Outstore outstore) {
+		return outstoreDao.deleteOutstoresById(outstore);
+	}
 }
