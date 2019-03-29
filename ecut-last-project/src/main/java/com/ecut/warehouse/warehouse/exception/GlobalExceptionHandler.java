@@ -29,7 +29,7 @@ public class GlobalExceptionHandler {
 		e.printStackTrace();
 		log.error("exception handler: ", e);
 		Map<String, Object> map = new HashMap<>();
-		map.put("retCode", -999999);
+		map.put("retCode", -3);
 		map.put("exceptionMsg",e.getMessage());
 		map.put("retMsg", "系统内部异常，请联系管理员");
 		return map;

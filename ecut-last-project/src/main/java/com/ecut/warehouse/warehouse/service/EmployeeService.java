@@ -3,6 +3,8 @@ package com.ecut.warehouse.warehouse.service;
 import com.ecut.warehouse.warehouse.entity.Employee;
 import com.ecut.warehouse.warehouse.entity.Goods;
 
+import java.util.List;
+
 /**
  * Copyright (C), 2015-2019, XXX有限公司
  * FileName: EmployeeService
@@ -19,4 +21,5 @@ public interface EmployeeService {
 	public int updateEmployee(Employee employee);
 	public Employee getEmployeeById(Employee employee);
 	public int addEmployee(Employee employee);
+	public List<Employee> getEmployees();
 }

@@ -3,6 +3,8 @@ package com.ecut.warehouse.warehouse.dao;
 import com.ecut.warehouse.warehouse.entity.Employee;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 /**
  * Copyright (C), 2015-2019, XXX有限公司
  * FileName: EmployeeDao
@@ -25,4 +27,6 @@ public interface EmployeeDao {
 	public Employee getEmployeeById(Employee employee);
 
 	public int addEmployee(Employee employee);
+
+	public List<Employee> getEmployees();
 }

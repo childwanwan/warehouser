@@ -1,6 +1,7 @@
 package com.ecut.warehouse.warehouse.controller;
 
 import com.ecut.warehouse.warehouse.domain.DoChangFunction;
+import com.ecut.warehouse.warehouse.domain.EmployeeForm;
 import com.ecut.warehouse.warehouse.domain.ReturnJsonData;
 import com.ecut.warehouse.warehouse.entity.Employee;
 import com.ecut.warehouse.warehouse.entity.Goods;
@@ -168,6 +169,30 @@ public class EmployeeController {
 	}
 
 
+	@RequestMapping(value = "/employee/getEmployees", method = RequestMethod.GET)
+	public ResponseEntity<JSONObject> getEmployees() {
+		//定义返回的json
+		JSONObject returnJson = new JSONObject();
+		List<Employee> returnEmployee = new ArrayList<>();
+		try {
+			returnEmployee = employeeService.getEmployees();
+		} catch (Exception e) {
+			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.SYS_ERROR);
+		}
+		if (null != returnEmployee && returnEmployee.size()>0) {
+			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.OK);
+			List<EmployeeForm> list = new ArrayList<>();
+			for (int i = 0;i<returnEmployee.size();i++){
+				list.add(DoChangFunction.employeeChangeToEmployeeForm(returnEmployee.get(i)));
+			}
+			returnJson.put("data", list);
+		} else {
+			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.DATA_ERROR);
+		}
+		return new ResponseEntity<>(returnJson, HttpStatus.ACCEPTED);
+	}
+
+
 	/*
 	 * @Author:Childwanwan
 	 * @Description:添加employee
@@ -186,6 +211,7 @@ public class EmployeeController {
 		if(null ==employee.getPassword() || "".equals(employee.getPassword())){
 			employee.setPassword("123456");
 		}
+		System.out.println(employee);
 		try {
 			i = employeeService.addEmployee(employee);
 		} catch (Exception e) {

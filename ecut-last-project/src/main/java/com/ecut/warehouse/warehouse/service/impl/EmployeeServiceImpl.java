@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 /**
  * Copyright (C), 2019-2019, XXX有限公司
  * FileName: EmployeeServiceImpl
@@ -47,5 +49,10 @@ public class EmployeeServiceImpl implements EmployeeService {
 	@Transactional
 	public int addEmployee(Employee employee) {
 		return employeeDao.addEmployee(employee);
+	}
+
+	@Override
+	public List<Employee> getEmployees() {
+		return employeeDao.getEmployees();
 	}
 }
