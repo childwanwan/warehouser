@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f7815b6d-168d-4ac5-b606-32dd50969dff" name="Default Changelist" comment="Default Changelist">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/dao/EmployeeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/dao/EmployeeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/EmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/impl/EmployeeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecut-last-project/src/main/resources/mapper/tbl_employeeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/mapper/tbl_employeeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/controller/EmployeeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/controller/ProviderControllre.class" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/controller/ProviderControllre.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/dao/EmployeeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/dao/EmployeeDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/exception/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/exception/GlobalExceptionHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/service/EmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/service/EmployeeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/service/impl/EmployeeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/service/impl/EmployeeServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecut-last-project/target/classes/mapper/tbl_employeeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/target/classes/mapper/tbl_employeeMapper.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f7815b6d-168d-4ac5-b606-32dd50969dff" name="Default Changelist" comment="Default Changelist" />
     <ignored path="$PROJECT_DIR$/ecut-last-project/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +23,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/OutstoreController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
+            <state relative-caret-position="221">
               <caret line="163" column="5" lean-forward="true" selection-start-line="163" selection-start-column="5" selection-end-line="163" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -444,12 +429,12 @@
       <workItem from="1553754788263" duration="19611000" />
       <workItem from="1553819366089" duration="9198000" />
       <workItem from="1553837613737" duration="593000" />
-      <workItem from="1553838374791" duration="3856000" />
+      <workItem from="1553838374791" duration="4519000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92076000" />
+    <option name="totallyTimeSpent" value="92739000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -906,7 +891,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/OutstoreController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
+        <state relative-caret-position="221">
           <caret line="163" column="5" lean-forward="true" selection-start-line="163" selection-start-column="5" selection-end-line="163" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
