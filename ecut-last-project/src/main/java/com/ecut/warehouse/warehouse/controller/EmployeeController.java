@@ -104,13 +104,13 @@ public class EmployeeController {
 				//System.out.println(returnJson);
 				returnJson.put("data", DoChangFunction.employeeChangeToEmployeeForm(employeeResult));
 				//登录成功，跳转到index页面
-                response.sendRedirect("http://localhost:8080/admin/index.html");
+                //response.sendRedirect("http://localhost:8080/admin/index.html");
 			} else {
 				returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.DATA_ERROR);
 			}
 		} catch (Exception e) {
 			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.SYS_ERROR);
-			throw new RuntimeException("登入出问题了,请联系后台处理人员!" + e);
+			//throw new RuntimeException("登入出问题了,请联系后台处理人员!" + e);
 		}
 		return new ResponseEntity<>(returnJson, HttpStatus.ACCEPTED);
 	}
