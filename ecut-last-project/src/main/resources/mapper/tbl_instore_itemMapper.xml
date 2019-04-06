@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecut.warehouse.warehouse.dao.InstoreItemsDao">
+
+    <select id="getInstoresGoodsByInstoresId" resultType="com.ecut.warehouse.warehouse.entity.InstoreItems" parameterType="com.ecut.warehouse.warehouse.entity.InstoreItems">
+        SELECT   id,instore_id,goods_id,buy_num,status,comment
+        FROM tbl_instore_items
+        where instore_id = #{instoreId} and status != 9999
+    </select>
+
+</mapper>

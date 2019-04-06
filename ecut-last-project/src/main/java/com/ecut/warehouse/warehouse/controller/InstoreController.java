@@ -4,8 +4,11 @@ import com.alibaba.fastjson.JSON;
 import com.ecut.warehouse.warehouse.domain.ReturnJsonData;
 import com.ecut.warehouse.warehouse.entity.Goods;
 import com.ecut.warehouse.warehouse.entity.Instore;
+import com.ecut.warehouse.warehouse.entity.InstoreItems;
+import com.ecut.warehouse.warehouse.service.InstoreItemsService;
 import com.ecut.warehouse.warehouse.service.InstoreService;
 import com.ecut.warehouse.warehouse.utils.CommonUtils;
+import com.ecut.warehouse.warehouse.utils.DateUtil;
 import lombok.extern.slf4j.Slf4j;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,10 +17,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author yanhq@si-tech.com.cn
@@ -30,6 +30,8 @@ import java.util.Map;
 @RestController
 @RequestMapping("/instore")
 public class InstoreController {
+    @Autowired
+    private InstoreItemsService instoreItemsService;
 
     @Autowired
     InstoreService instoreService;
@@ -72,8 +74,9 @@ public class InstoreController {
         return new ResponseEntity<>(returnJson, HttpStatus.ACCEPTED);
     }
 
-    @GetMapping("/queryById")
-    public ResponseEntity<String> queryById(@RequestParam String instoreId){
+    @PostMapping("/queryById")
+    public ResponseEntity<String> queryById(@RequestBody JSONObject jsonObject ){
+        String instoreId = jsonObject.get("instoreId").toString();
         //1.定义全局变量
         JSONObject returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.OK);
         Instore instore = null;
@@ -90,7 +93,7 @@ public class InstoreController {
         return new ResponseEntity<>(JSON.toJSONString(returnJson), HttpStatus.ACCEPTED);
     }
 
-    @GetMapping("/query")
+    @PostMapping("/query")
     public ResponseEntity<String> queryByMap(@RequestBody JSONObject jsonObject){
         //1.定义全局变量
         JSONObject returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.OK);
@@ -101,13 +104,18 @@ public class InstoreController {
         //2.查询单个
         try{
             instores = instoreService.selectAll(instore);
+//            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-mm-dd  HH:mm:ss");
+//
+//            for (int i = 0;i<instores.size();i++){
+//                instores.get(i).setInstoreTime(DateUtil.parse(simpleDateFormat.format(instores.get(i).getInstoreTime()),"yyyy-MM-dd HH:mm:ss"));
+//            }
         }catch(Exception e){
             log.error("========================入库单查询失败"+ e.getMessage());
             returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.SYS_ERROR);
             return new ResponseEntity<>(returnJson.toString(), HttpStatus.ACCEPTED);
         }
         //3.返回值处理
-        returnJson.put("instores", instores.toString());
+        returnJson.put("instores", instores);
         return new ResponseEntity<>(JSON.toJSONString(returnJson), HttpStatus.ACCEPTED);
     }
 
@@ -122,6 +130,37 @@ public class InstoreController {
         if(null != jsonObject.get("status"))
             instore.setStatus((Integer)jsonObject.get("status"));
         return instore;
+    }
+
+
+    @RequestMapping(value = "/getInstoresGoodsByInstoresId", method = RequestMethod.POST)
+    public ResponseEntity<JSONObject> getInstoresGoodsByInstoresId(@RequestBody JSONObject jsonObject) {
+
+        String id = jsonObject.get("instoreId").toString();
+        //定义返回的json
+        JSONObject returnJson = new JSONObject();
+
+        InstoreItems paraInstoreItems = new InstoreItems();
+        paraInstoreItems.setInstoreId(id);
+
+
+        List<InstoreItems> returnList = new ArrayList<>();
+
+        try {
+            returnList = instoreItemsService.getInstoresGoodsByInstoresId(paraInstoreItems);
+        }catch (Exception e){
+            returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.SYS_ERROR);
+        }
+
+        if (null!=returnList&&!"".equals(returnList)){
+            returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.OK);
+            returnJson.put("data",returnList);
+        }else {
+            returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.DATA_ERROR);
+        }
+
+        //获取参数，及将参数封装成对象
+        return new ResponseEntity<>(returnJson, HttpStatus.ACCEPTED);
     }
 
 }

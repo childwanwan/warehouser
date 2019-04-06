@@ -153,7 +153,7 @@ public class EmployeeController {
 	 * @Para:* @param 根据id获取职工信息
 	 * @data:2019/3/17  22:50
 	 */
-	@RequestMapping(value = "/employee/getEmployeeById", method = RequestMethod.GET)
+	@RequestMapping(value = "/employee/getEmployeeById", method = RequestMethod.POST)
 	public ResponseEntity<JSONObject> getEmployeeById(@RequestBody Employee employee) {
 		//定义返回的json
 		JSONObject returnJson = new JSONObject();
