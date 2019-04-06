@@ -51,4 +51,9 @@ public class GoodsServiceImpl implements GoodsService {
 	public Goods getGoodsByGoodsCode(Goods goods) {
 		return goodsDao.getGoodsByGoodsCode(goods);
 	}
+
+	@Override
+	public List<Goods> getGoodsBygoodsName(Goods goods) {
+		return goodsDao.getGoodsBygoodsName(goods);
+	}
 }

@@ -114,7 +114,7 @@ public class GoodsController {
 
 	/*
 	 * @Author:Childwanwan
-	 * @Description:添加商品
+	 * @Description:更新商品
 	 * @Para:* @param
 	 * @data:2019/3/17  22:50
 	 */
@@ -174,7 +174,6 @@ public class GoodsController {
 	}
 
 
-
 	/*
 	 * @Author:Childwanwan
 	 * @Description:根据goodsCode查询goods
@@ -197,6 +196,36 @@ public class GoodsController {
 		if (null != good && !"".equals(good)) {
 			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.OK);
 			returnJson.put("data", good);
+		}
+		//返回
+		return new ResponseEntity<>(returnJson, HttpStatus.ACCEPTED);
+	}
+
+
+	/*
+	 * @Author:Childwanwan
+	 * @Description:根据goodsName模糊查询goods
+	 * @Para:Id
+	 * @data:2019/3/17  22:50
+	 */
+	@RequestMapping(value = "/goods/getGoodsBygoodsName", method = RequestMethod.POST)
+	public ResponseEntity<JSONObject> getGoodsBygoodsName(@RequestBody JSONObject jsonObject) {
+		String goodsName = jsonObject.get("goodsName").toString();
+		//定义返回的json
+		JSONObject returnJson = new JSONObject();
+		List<Goods> list = new ArrayList<>();
+		Goods good = new Goods();
+		if (null != goodsName && !"".equals(goodsName)) {
+			good.setGoodsName(goodsName);
+		}
+		try {
+			list = goodsService.getGoodsBygoodsName(good);
+		} catch (Exception e) {
+			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.SYS_ERROR);
+		}
+		if (null != list && list.size() > 0) {
+			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.OK);
+			returnJson.put("data", list);
 		}
 		//返回
 		return new ResponseEntity<>(returnJson, HttpStatus.ACCEPTED);

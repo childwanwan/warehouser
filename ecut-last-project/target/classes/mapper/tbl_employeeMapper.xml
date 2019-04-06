@@ -8,7 +8,7 @@
     <select id="selectEmployeeByUsernamePasswordType" resultType="com.ecut.warehouse.warehouse.entity.Employee">
         SELECT   id,employee_name,password,telephone,addr,status
         FROM tbl_employee
-        where employee_name=#{employeeName} and password=#{password} and status=#{status}
+        where telephone=#{telephone} and password=#{password} and status=#{status}
     </select>
 
 

@@ -47,6 +47,7 @@ public class EmployeeController {
 		System.out.println("test1");
 		JSONObject returnJson = new JSONObject();
 		returnJson.put("hello", "world");
+		//response.addCookie(new Cookie("wan","pingping"));
 		return new ResponseEntity<>(returnJson, HttpStatus.ACCEPTED);
 	}
 
@@ -79,14 +80,14 @@ public class EmployeeController {
 		//定义返回的json
 		JSONObject returnJson = new JSONObject();
 
-		System.out.println("已经进入到employee login方法");
+		//System.out.println("已经进入到employee login方法");
 
 		//获取参数，及将参数封装成对象
 		Employee employeePara = new Employee();
-		if (null != jsonObject.get("employeeName") && !"".equals(jsonObject.get("employeeName").toString())
+		if (null != jsonObject.get("telephone") && !"".equals(jsonObject.get("telephone").toString())
 				&& null != jsonObject.get("password") && !"".equals(jsonObject.get("password").toString())
 				&& null != jsonObject.get("status") && !"".equals(jsonObject.get("status").toString())) {
-			employeePara.setEmployeeName(jsonObject.get("employeeName").toString())
+			employeePara.setTelephone(jsonObject.get("telephone").toString())
 					.setPassword(jsonObject.get("password").toString())
 					.setStatus(Integer.parseInt(jsonObject.get("status").toString()));
 		} else {
@@ -97,10 +98,12 @@ public class EmployeeController {
 			Employee employeeResult = employeeService.selectEmployeeByUsernamePasswordType(employeePara);
 			if (null != employeeResult && !"".equals(employeeResult)) {
 
-				request.getSession().setAttribute("user", employeeResult);
+				//System.out.println("sessionId:"+request.getRequestedSessionId());
+				request.getSession().setAttribute(request.getRequestedSessionId(), employeeResult);
 
 				//返回的数据
 				returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.OK);
+				returnJson.put("sessionId",request.getRequestedSessionId());
 				//调用domain里的函数，将employee转换
 				//System.out.println(returnJson);
 				returnJson.put("data", DoChangFunction.employeeChangeToEmployeeForm(employeeResult));
@@ -113,6 +116,7 @@ public class EmployeeController {
 			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.SYS_ERROR);
 			//throw new RuntimeException("登入出问题了,请联系后台处理人员!" + e);
 		}
+		//response.addCookie(new Cookie("wan11111111","pingping"));
 		return new ResponseEntity<>(returnJson, HttpStatus.ACCEPTED);
 	}
 
