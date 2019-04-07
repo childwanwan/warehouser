@@ -1,6 +1,8 @@
 package com.ecut.warehouse.warehouse.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.ecut.warehouse.warehouse.domain.DoChangFunction;
+import com.ecut.warehouse.warehouse.domain.GoodsDireForm;
 import com.ecut.warehouse.warehouse.domain.ReturnJsonData;
 import com.ecut.warehouse.warehouse.entity.Goods;
 import com.ecut.warehouse.warehouse.service.GoodsDicService;
@@ -12,6 +14,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -109,8 +112,17 @@ public class GoodsDicController {
             returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.SYS_ERROR);
             return new ResponseEntity<>(returnJson.toString(), HttpStatus.ACCEPTED);
         }
+        List<GoodsDireForm> list = new ArrayList<>();
+        if (null!=goods&&goods.size()>0){
+            GoodsDireForm goodsDireForm = new GoodsDireForm();
+            for (int i =0 ;i<goods.size();i++){
+                goodsDireForm = DoChangFunction.goodsChangeToGoodsDireForm(goods.get(i));
+                list.add(goodsDireForm);
+            }
+        }
+
         //3.返回值处理
-        returnJson.put("goods", goods.toString());
+        returnJson.put("data", list);
         return new ResponseEntity<>(JSON.toJSONString(returnJson), HttpStatus.ACCEPTED);
     }
 

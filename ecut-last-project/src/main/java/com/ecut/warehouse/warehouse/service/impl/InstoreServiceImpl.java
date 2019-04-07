@@ -10,6 +10,7 @@ import com.ecut.warehouse.warehouse.utils.CommonUtils;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashMap;
 import java.util.List;
@@ -51,21 +52,32 @@ public class InstoreServiceImpl implements InstoreService {
     }
 
     @Override
+    @Transactional
     public void insert(Instore instore, List<JSONObject> goods) {
         instoreDao.insertInstore(instore);
         Map<String, Object> mapRel = null;
         Map<String, Object> mapGood = null;
+        String id = null;
         for (JSONObject good: goods){
+            id = CommonUtils.getUUID();
             mapRel = new HashMap<String, Object>();
             mapGood = new HashMap<String, Object>();
             mapRel.put("id", CommonUtils.getUUID());
             mapRel.put("instoreId",instore.getId());
-            mapRel.put("goodsId", good.get("id"));
+            mapRel.put("goodsId", id);
             mapRel.put("buyNum", good.get("goodsNum"));
             mapRel.put("comment", good.get("comment"));
+            System.out.println(mapRel);
             instoreDao.insertRel(mapRel);
             mapGood.put("id", good.get("id"));
-            goodsDao.addGoods(goodsDicDao.selectByMap(mapGood).setGoodsNum((Integer) good.get("goodsNum")));
+
+            Goods goods1 = goodsDicDao.selectByMap(mapGood);
+            //System.out.println(good);
+            //System.out.println(good.get("specificationItems").toString());
+            goods1.setSpecificationItems(good.get("specificationItems").toString());
+            goods1.setGoodsNum(Integer.parseInt( good.get("goodsNum").toString()));
+            goods1.setId(id);
+            goodsDao.addGoods(goods1);
         }
     }
 }

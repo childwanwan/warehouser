@@ -2,18 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7815b6d-168d-4ac5-b606-32dd50969dff" name="Default Changelist" comment="Default Changelist">
-      <change afterPath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/dao/InstoreItemsDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/entity/InstoreItems.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/InstoreItemsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/impl/InstoreItemsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/utils/DateUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/mapper/tbl_instore_itemMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/domain/GoodsDireForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/EmployeeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/GoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/GoodsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/GoodsDicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/GoodsDicController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/InstoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/InstoreController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/controller/EmployeeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/controller/GoodsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/controller/GoodsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/domain/DoChangFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/domain/DoChangFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/impl/InstoreServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/impl/InstoreServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecut-last-project/src/main/resources/mapper/tbl_instoreMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/resources/mapper/tbl_instoreMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/controller/InstoreController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/target/classes/com/ecut/warehouse/warehouse/controller/InstoreController.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/ecut-last-project/target/" />
@@ -25,68 +21,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/GoodsController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="156" column="52" selection-start-line="156" selection-start-column="52" selection-end-line="156" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/InstoreController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-322">
-              <caret line="120" lean-forward="true" selection-start-line="120" selection-end-line="120" />
+            <state relative-caret-position="56">
+              <caret line="40" column="25" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/impl/InstoreServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="113">
+              <caret line="77" column="80" selection-start-line="77" selection-start-column="80" selection-end-line="77" selection-end-column="80" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/OutstoreController.java">
+        <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/dao/GoodsDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="193" column="5" lean-forward="true" selection-start-line="166" selection-start-column="4" selection-end-line="193" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="114">
+              <caret line="22" column="23" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/entity/InstoreItems.java">
+        <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/mapper/tbl_goodsMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="23" column="25" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/InstoreItemsService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="86" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/impl/InstoreItemsServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="25" column="59" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="59" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="177">
+              <caret line="65" column="17" lean-forward="true" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -94,7 +60,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/mapper/tbl_instore_itemMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
+            <state relative-caret-position="140">
               <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
@@ -103,29 +69,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/mapper/tbl_instoreMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            <state relative-caret-position="252">
+              <caret line="108" column="43" lean-forward="true" selection-start-line="108" selection-start-column="43" selection-end-line="108" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/dao/InstoreItemsDao.java">
+        <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/mapper/tbl_employeeMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="19" column="58" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="58" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="112">
+              <caret line="22" column="28" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/entity/Instore.java">
+        <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/EmployeeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="23" column="46" lean-forward="true" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
+            <state relative-caret-position="112">
+              <caret line="175" column="51" lean-forward="true" selection-start-line="175" selection-start-column="29" selection-end-line="175" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/dao/GoodsDicDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/mapper/tbl_goods_dicMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -136,8 +117,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Kotlin File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -147,10 +128,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/dao/ProviderDao.java" />
-        <option value="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/impl/ProviderServiceImpl.java" />
-        <option value="$PROJECT_DIR$/ecut-last-project/src/main/resources/mapper/tbl_providerMapper.xml" />
-        <option value="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/ProviderService.java" />
         <option value="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/entity/Goods.java" />
         <option value="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/service/loginService.js" />
         <option value="$PROJECT_DIR$/ecut-last-project/src/main/resources/static/js/controller/loginController.js" />
@@ -158,7 +135,6 @@
         <option value="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/entity/Outstore.java" />
         <option value="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/InstoreService.java" />
         <option value="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/dao/InstoreDao.java" />
-        <option value="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/impl/InstoreServiceImpl.java" />
         <option value="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/entity/outstoreItems.java" />
         <option value="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/entity/OutstoreItems.java" />
         <option value="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/OutstoreService.java" />
@@ -196,8 +172,13 @@
         <option value="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/dao/InstoreItemsDao.java" />
         <option value="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/impl/InstoreItemsServiceImpl.java" />
         <option value="$PROJECT_DIR$/ecut-last-project/src/main/resources/mapper/tbl_instore_itemMapper.xml" />
-        <option value="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/InstoreController.java" />
+        <option value="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/domain/GoodsDireForm.java" />
+        <option value="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/domain/DoChangFunction.java" />
+        <option value="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/GoodsDicController.java" />
         <option value="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/GoodsController.java" />
+        <option value="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/InstoreController.java" />
+        <option value="$PROJECT_DIR$/ecut-last-project/src/main/resources/mapper/tbl_instoreMapper.xml" />
+        <option value="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/impl/InstoreServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -219,7 +200,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="55" />
     <option name="width" value="1250" />
     <option name="height" value="1050" />
@@ -230,6 +211,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -309,6 +291,26 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="warehouse" type="462c0819:PsiDirectoryNode" />
               <item name="warehouse" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="warehouser" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ecut-last-project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="warehouse" type="462c0819:PsiDirectoryNode" />
+              <item name="warehouse" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="warehouser" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ecut-last-project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="warehouse" type="462c0819:PsiDirectoryNode" />
+              <item name="warehouse" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -341,7 +343,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -354,7 +355,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554566017708" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554651592668" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/springboot-cros" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -435,12 +436,13 @@
       <workItem from="1554129874911" duration="2063000" />
       <workItem from="1554212539039" duration="43000" />
       <workItem from="1554434646714" duration="9666000" />
-      <workItem from="1554514073719" duration="16487000" />
+      <workItem from="1554514073719" duration="16778000" />
+      <workItem from="1554599512038" duration="13184000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141869000" />
+    <option name="totallyTimeSpent" value="155344000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -453,16 +455,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.492674" visible="true" weight="0.22520107" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.492674" visible="true" weight="0.22788204" />
       <window_info id="Structure" order="3" weight="0.25" />
       <window_info id="Web" order="4" sideWeight="0.507326" side_tool="true" weight="0.25737265" />
       <window_info id="Image Layers" order="5" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="UI Designer" order="7" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.32794118" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.32765958" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50208336" side_tool="true" weight="0.3289183" />
       <window_info anchor="bottom" id="Version Control" order="2" weight="0.19705883" />
       <window_info anchor="bottom" id="Spring" order="3" weight="0.32979977" />
@@ -477,7 +480,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.4310954" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
-      <window_info active="true" anchor="bottom" id="Run Dashboard" order="15" visible="true" weight="0.475" />
+      <window_info active="true" anchor="bottom" id="Run Dashboard" order="15" visible="true" weight="0.42695037" />
       <window_info anchor="right" id="Palette&#9;" order="0" />
       <window_info anchor="right" id="Maven Projects" order="1" visible="true" weight="0.3299356" />
       <window_info anchor="right" id="Bean Validation" order="2" />
@@ -539,74 +542,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Default Changelist" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/entity/Outstore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/dao/OutstoreDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/OutstoreService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="23" column="54" lean-forward="true" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/impl/OutstoreServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="164" column="46" selection-start-line="164" selection-start-column="27" selection-end-line="164" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#outstoreLogic#0;class#OutstoreServiceImpl#0" />
-            <element signature="e#4941#4942#0" expanded="true" />
-            <element signature="e#4959#4960#0" expanded="true" />
-            <element signature="e#5031#5032#0" expanded="true" />
-            <element signature="e#5049#5050#0" expanded="true" />
-            <element signature="e#5165#5166#0" expanded="true" />
-            <element signature="e#5180#5181#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/mapper/tbl_outstoreMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/ProviderControllre.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="127" column="18" lean-forward="true" selection-start-line="127" selection-start-column="18" selection-end-line="127" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/ProviderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/mapper/tbl_providerMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
@@ -772,29 +707,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/mapper/tbl_employeeMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/GoodsService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="259">
           <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="56" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/dao/GoodsDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="26" column="56" selection-start-line="26" selection-start-column="56" selection-end-line="26" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/mapper/tbl_goods_dicMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/impl/GoodsServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -806,20 +724,6 @@
             <element signature="e#1314#1315#0" expanded="true" />
             <element signature="e#1332#1333#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/mapper/tbl_goodsMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="44" column="61" selection-start-line="44" selection-start-column="61" selection-end-line="44" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/EmployeeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10">
-          <caret line="157" column="19" lean-forward="true" selection-start-line="157" selection-start-column="19" selection-end-line="157" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -840,37 +744,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/entity/Instore.java">
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/InstoreItemsController.java" />
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/mapper/tbl_instore_itemMapper.xml.kt" />
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/OutstoreController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="23" column="46" lean-forward="true" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
+        <state relative-caret-position="4900">
+          <caret line="193" column="5" selection-start-line="166" selection-start-column="4" selection-end-line="193" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/entity/InstoreItems.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
+        <state relative-caret-position="476">
           <caret line="23" column="25" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/OutstoreController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="193" column="5" lean-forward="true" selection-start-line="166" selection-start-column="4" selection-end-line="193" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/InstoreItemsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -879,7 +768,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/InstoreItemsService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
+        <state relative-caret-position="448">
           <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="86" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -887,16 +776,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/mapper/tbl_instore_itemMapper.xml.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/impl/InstoreItemsServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
+        <state relative-caret-position="504">
           <caret line="25" column="59" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -906,7 +788,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/dao/InstoreItemsDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
+        <state relative-caret-position="448">
           <caret line="19" column="58" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -914,31 +796,128 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/mapper/tbl_instoreMapper.xml">
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/entity/Instore.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        <state relative-caret-position="448">
+          <caret line="23" column="46" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/mapper/tbl_instore_itemMapper.xml">
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/entity/Goods.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="179">
+          <caret line="39" column="29" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="39" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/InstoreController.java">
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/domain/GoodsDireForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-322">
-          <caret line="120" lean-forward="true" selection-start-line="120" selection-end-line="120" />
+        <state relative-caret-position="375">
+          <caret line="32" column="8" lean-forward="true" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/GoodsDicController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="91" column="28" lean-forward="true" selection-start-line="91" selection-start-column="28" selection-end-line="91" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/domain/DoChangFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="39" column="80" selection-start-line="39" selection-start-column="80" selection-end-line="39" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/GoodsController.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="924">
+          <caret line="185" column="64" selection-start-line="185" selection-start-column="64" selection-end-line="185" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/InstoreService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/dao/GoodsDicDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/mapper/tbl_goods_dicMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/dao/GoodsDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="22" column="23" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/mapper/tbl_goodsMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="65" column="17" lean-forward="true" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/mapper/tbl_instore_itemMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/mapper/tbl_instoreMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="108" column="43" lean-forward="true" selection-start-line="108" selection-start-column="43" selection-end-line="108" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/resources/mapper/tbl_employeeMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
-          <caret line="156" column="52" selection-start-line="156" selection-start-column="52" selection-end-line="156" selection-end-column="52" />
+          <caret line="22" column="28" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/EmployeeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="175" column="51" lean-forward="true" selection-start-line="175" selection-start-column="29" selection-end-line="175" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/InstoreController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="40" column="25" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/impl/InstoreServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="77" column="80" selection-start-line="77" selection-start-column="80" selection-end-line="77" selection-end-column="80" />
         </state>
       </provider>
     </entry>

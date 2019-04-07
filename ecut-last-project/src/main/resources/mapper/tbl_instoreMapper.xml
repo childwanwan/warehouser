@@ -100,13 +100,13 @@
                 #{id,jdbcType=VARCHAR},
             </if>
             <if test="instoreId != null and instoreId != ''">
-                #{instore_id,jdbcType=VARCHAR},
+                #{instoreId,jdbcType=VARCHAR},
             </if>
             <if test="goodsId != null and goodsId != ''">
-                #{goods_id,jdbcType=VARCHAR},
+                #{goodsId,jdbcType=VARCHAR},
             </if>
             <if test="buyNum != null ">
-                #{buy_num,jdbcType=INTEGER},
+                #{buyNum,jdbcType=INTEGER},
             </if>
             <if test="comment != null and comment != ''">
                 #{comment,jdbcType=VARCHAR},

@@ -47,9 +47,9 @@ public class InstoreController {
         //2.封装实体
         instore = loadInstore(jsonObject, instore);
         //3.新增
-        try{
+
             instoreService.insert(instore.setId(CommonUtils.getUUID()), goodsId);
-        }catch(Exception e){
+        try{}catch(Exception e){
             log.error("========================入库单新增失败"+ e.getMessage());
             returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.SYS_ERROR);
             return new ResponseEntity<>(returnJson, HttpStatus.ACCEPTED);
@@ -58,8 +58,9 @@ public class InstoreController {
         return new ResponseEntity<>(returnJson, HttpStatus.ACCEPTED);
     }
 
-    @GetMapping("/delete")
-    public ResponseEntity<JSONObject> delete(@RequestParam String instoreId){
+    @PostMapping("/delete")
+    public ResponseEntity<JSONObject> delete(@RequestBody JSONObject jsonObject){
+        String instoreId = jsonObject.get("instoreId").toString();
         //1.定义全局变量
         JSONObject returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.OK);
         //2.删除

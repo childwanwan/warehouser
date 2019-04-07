@@ -181,8 +181,10 @@ public class GoodsController {
 	 * @Para:Id
 	 * @data:2019/3/17  22:50
 	 */
-	@RequestMapping(value = "/goods/getGoodsByGoodsCode", method = RequestMethod.GET)
-	public ResponseEntity<JSONObject> getGoodsByGoodsCode(@RequestParam String goodsCode) {
+	@RequestMapping(value = "/goods/getGoodsByGoodsCode", method = RequestMethod.POST)
+	public ResponseEntity<JSONObject> getGoodsByGoodsCode(@RequestBody JSONObject jsonObject ) {
+		String goodsCode= jsonObject.get("goodsCode").toString();
+
 		//定义返回的json
 		JSONObject returnJson = new JSONObject();
 		Goods good = new Goods();
