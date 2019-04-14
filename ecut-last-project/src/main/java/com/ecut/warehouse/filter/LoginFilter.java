@@ -31,7 +31,7 @@ public class LoginFilter implements Filter {
 
 	// 多个跨域域名设置
 	public static final String[] ALLOW_DOMAIN = {"http://localhost:8080",
-			"http://localhost:8090", "http://localhost:8081"};
+			"http://120.78.132.185:8881", "http://localhost:8081"};
 
 	Logger log = LoggerFactory.getLogger(LoginFilter.class);
 

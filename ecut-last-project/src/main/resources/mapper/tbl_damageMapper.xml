@@ -80,7 +80,7 @@
         select
         <include refid="baseList"/>
         from tbl_damage
-        where 1=1
+        where 1=1 and status != 9999
         <if test="deep != null and deep != ''">
             and deep like concat('%',#{deep,jdbcType=VARCHAR},'%')
         </if>

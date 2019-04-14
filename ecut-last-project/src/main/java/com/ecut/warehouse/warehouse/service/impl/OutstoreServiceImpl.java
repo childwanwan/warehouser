@@ -68,7 +68,7 @@ public class OutstoreServiceImpl implements OutstoreService {
 			Goods updateGoods = new Goods();
 			Goods oldGoods = new Goods();
 			Goods paramGoods = new Goods();
-			try {
+
 				for (int i = 0; i < goodsList.size(); i++) {
 					//应该是有一个goodsCode，还有一个是goodsNum
 					//updateGoods = (Goods) goodsList.get(i);
@@ -77,8 +77,11 @@ public class OutstoreServiceImpl implements OutstoreService {
 					//updateGoods.setComment(JSONObject.fromObject(goodsList.get(i)).get("comment").toString());
 					//定义的goods是用来当做参数查询原表里的goods信息的
 					paramGoods.setGoodsCode(updateGoods.getGoodsCode());
+					paramGoods.setSpecificationItems(updateGoods.getSpecificationItems());
 					//查询出相关的商品信息
-					oldGoods = goodsService.getGoodsByGoodsCode(paramGoods);
+					List<Goods> list = goodsService.getGoodsByCondition(paramGoods);
+					oldGoods = list.get(0);
+					//oldGoods = goodsService.queryGoods();
 
 					if (null != oldGoods && !"".equals(oldGoods)) {
 						goodsIds.add(oldGoods.getId());
@@ -90,7 +93,7 @@ public class OutstoreServiceImpl implements OutstoreService {
 					}
 					updateGoodsNum = updateGoodsNum + goodsService.updateGoods(updateGoods);
 				}
-			} catch (Exception e) {
+			try {} catch (Exception e) {
 				throw new RuntimeException("系统内部异常！");
 			}
 		}
@@ -98,8 +101,8 @@ public class OutstoreServiceImpl implements OutstoreService {
 		//3、把数据存入入库表
 		Outstore outstore = new Outstore();
 		outstore.setTotalNum(Integer.parseInt(jsonObject.get("totalNum").toString()));
-		outstore.setProviderId(jsonObject.get("providerId").toString());
-		outstore.setReserveId(jsonObject.get("reserveId").toString());
+		outstore.setProviderId(jsonObject.get("provideId").toString());
+		outstore.setReserveId(jsonObject.get("reserverId").toString());
 		//这个uuid后面还需要用到
 		String uuid = CommonUtils.getUUID();
 		outstore.setId(uuid);

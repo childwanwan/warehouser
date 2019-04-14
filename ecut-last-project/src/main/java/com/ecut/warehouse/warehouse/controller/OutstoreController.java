@@ -134,9 +134,9 @@ public class OutstoreController {
 	 * @Return: org.springframework.http.ResponseEntity<net.sf.json.JSONObject>
 	 * @date: 2019/3/29  10:17
 	 */
-	@RequestMapping(value = "/outstore/deleteOutstoresById", method = RequestMethod.GET)
-	public ResponseEntity<JSONObject> deleteOutstoresById(@RequestParam String id) {
-
+	@RequestMapping(value = "/outstore/deleteOutstoresById", method = RequestMethod.POST)
+	public ResponseEntity<JSONObject> deleteOutstoresById(@RequestBody JSONObject jsonObject) {
+		String id = jsonObject.get("outstoreId").toString();
 		//定义返回的json
 		JSONObject returnJson = new JSONObject();
 

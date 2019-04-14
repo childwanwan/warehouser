@@ -187,18 +187,49 @@ public class GoodsController {
 
 		//定义返回的json
 		JSONObject returnJson = new JSONObject();
+		List<Goods> goods = new ArrayList<>();
 		Goods good = new Goods();
 		if (null != goodsCode && !"".equals(goodsCode)) {
 			good.setGoodsCode(goodsCode);
 		}
 		try {
-			good = goodsService.getGoodsByGoodsCode(good);
+			goods = goodsService.getGoodsByGoodsCode(good);
 		} catch (Exception e) {
 			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.SYS_ERROR);
 		}
-		if (null != good && !"".equals(good)) {
+		if (null != goods && !"".equals(goods) && goods.size()>0) {
 			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.OK);
-			returnJson.put("data", good);
+			returnJson.put("data", goods);
+		}
+		//返回
+		return new ResponseEntity<>(returnJson, HttpStatus.ACCEPTED);
+	}
+
+
+	/*
+	 * @Author:Childwanwan
+	 * @Description:根据条件查询goods
+	 * @Para:Id
+	 * @data:2019/3/17  22:50
+	 */
+	@RequestMapping(value = "/goods/getGoodsByCondition", method = RequestMethod.POST)
+	public ResponseEntity<JSONObject> getGoodsByGoodsCode(@RequestBody Goods good ) {
+		//String goodsCode= jsonObject.get("goodsCode").toString();
+
+		//定义返回的json
+		JSONObject returnJson = new JSONObject();
+		List<Goods> goods = new ArrayList<>();
+		if (null == good && "".equals(good)) {
+			good = new Goods();
+		}
+		try {
+			goods = goodsService.getGoodsByCondition(good);
+		} catch (Exception e) {
+			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.SYS_ERROR);
+		}
+		if (null != goods && !"".equals(goods) && goods.size()>0) {
+			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.OK);
+			returnJson.put("data", goods);
 		}
 		//返回
 		return new ResponseEntity<>(returnJson, HttpStatus.ACCEPTED);

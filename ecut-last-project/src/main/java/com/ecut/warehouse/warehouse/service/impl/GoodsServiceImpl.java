@@ -48,12 +48,17 @@ public class GoodsServiceImpl implements GoodsService {
 	}
 
 	@Override
-	public Goods getGoodsByGoodsCode(Goods goods) {
+	public List<Goods> getGoodsByGoodsCode(Goods goods) {
 		return goodsDao.getGoodsByGoodsCode(goods);
 	}
 
 	@Override
 	public List<Goods> getGoodsBygoodsName(Goods goods) {
 		return goodsDao.getGoodsBygoodsName(goods);
+	}
+
+	@Override
+	public List<Goods> getGoodsByCondition(Goods goods) {
+		return goodsDao.getGoodsByCondition(goods);
 	}
 }

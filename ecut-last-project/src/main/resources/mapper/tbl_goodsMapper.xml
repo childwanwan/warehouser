@@ -45,6 +45,24 @@
         where status !=9999 and goods_name like CONCAT('%', #{goodsName}, '%') and goods_num != 0
     </select>
 
+
+    <!--根据goodsName查询goods-->
+    <select id="getGoodsByCondition" resultType="com.ecut.warehouse.warehouse.entity.Goods">
+        SELECT   id,goods_code,goods_name,specification_items,custom_attribute_items,status,
+        comment,goods_type,goods_num
+        FROM tbl_goods
+        where status !=9999  and goods_num != 0
+        <if test="goodsCode!=null and goodsCode != ''"> and goods_code=#{goodsCode}</if>
+        <if test="goodsName!=null and goodsName !=''"> and goods_name=#{goodsName}</if>
+        <if test="specificationItems!=null and specificationItems!='' "> and specification_items=#{specificationItems}</if>
+        <if test="customAttributeItems!=null and customAttributeItems !=''">and custom_attribute_items=#{customAttributeItems},</if>
+        <if test="status!=null ">and status=#{status}</if>
+        <if test="comment!=null and comment !=''">and comment=#{comment}</if>
+        <if test="goodsType!=null and goodsType !=''">and goods_type=#{goodsType}</if>
+        <if test="goodsNum!=null">and goods_num=#{goodsNum}</if>
+    </select>
+
+
     <!--增加操作-->
     <insert id="addGoods"  parameterType="com.ecut.warehouse.warehouse.entity.Goods" >
         insert into tbl_goods

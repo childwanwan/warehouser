@@ -27,9 +27,9 @@ public class DamageServiceImpl implements DamageService {
     public void insertDamage(List<JSONObject> goodsId, Damage damage) {
         for(JSONObject id: goodsId){
             System.out.println("============"+id.get("id").toString()+"============"+damage.getId());
-            damageDao.insertGoodDamageRel(id.get("id").toString(), damage.getId(), (Integer)id.get("count"));
+            damageDao.insertGoodDamageRel(id.get("id").toString(), damage.getId(), Integer.parseInt(id.get("count").toString()));
         }
-        System.out.println("========================中间表插入完毕");
+        //System.out.println("========================中间表插入完毕");
         damageDao.insertDamage(damage);
     }
 

@@ -6,7 +6,7 @@
 
     <!--插入中间表操作-->
     <insert id="insertGoodDamageRel">
-        INSERT INTO tbl_damage_goods_rel(good_id, damage_id, good_num)
+        INSERT INTO tbl_damage_goods_rel(good_id, damage_id, goods_num)
         VALUES (#{goodId,jdbcType=VARCHAR}, #{damageId,jdbcType=VARCHAR}, #{count,jdbcType=INTEGER})
     </insert>
 
@@ -19,7 +19,7 @@
     </select>
 
     <select id="findCount" parameterType="java.lang.String" resultType="java.lang.Integer">
-        select (select goods_num from tbl_goods where id =  #{goodId})-good_num
+        select (select goods_num from tbl_goods where id =  #{goodId})-goods_num
         from tbl_damage_goods_rel
         where good_id = #{goodId} and damage_id = #{damageId}
     </select>
@@ -34,7 +34,7 @@
         g.status,
         g.comment,
         g.goods_type,
-        g.goods_num
+        r.goods_num
         from tbl_damage_goods_rel as r, tbl_goods as g
         where g.id = r.good_id and r.damage_id = #{damageId}
     </select>

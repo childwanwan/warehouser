@@ -24,7 +24,7 @@
         FROM tbl_goods_dic
         where status != 9999
         <if test="goodsCode != null and goodsCode != ''">
-           and goods_code like concat('%',#{goodsCode},'%')
+           and goods_code = #{goodsCode}
         </if>
         <if test="goodsName != null and goodsName != ''">
             and goods_name like concat('%',#{goodsName},'%')

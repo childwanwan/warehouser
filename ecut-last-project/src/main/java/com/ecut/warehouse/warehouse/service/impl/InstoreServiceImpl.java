@@ -57,27 +57,37 @@ public class InstoreServiceImpl implements InstoreService {
         instoreDao.insertInstore(instore);
         Map<String, Object> mapRel = null;
         Map<String, Object> mapGood = null;
-        String id = null;
+        Goods tmpGood = null;
         for (JSONObject good: goods){
-            id = CommonUtils.getUUID();
+            String id = CommonUtils.getUUID();
             mapRel = new HashMap<String, Object>();
             mapGood = new HashMap<String, Object>();
+            //System.out.println(good.get("id"));
+            tmpGood = goodsDao.getGoodsById(new Goods().setId(good.get("id").toString()));
+            //System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+           // System.out.println(tmpGood);
+           // System.out.println(good.get("specificationItems").toString().equals(tmpGood.getSpecificationItems()));
+           // System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+            if(null != tmpGood && good.get("specificationItems").toString().equals(tmpGood.getSpecificationItems())){
+                //加数量
+                goodsDao.updateGoods(tmpGood.setGoodsNum(tmpGood.getGoodsNum()+Integer.parseInt(good.get("goodsNum").toString())));
+            }else{
+                //添加商品
+                mapGood.put("id", good.get("id"));
+                Goods goods1 = goodsDicDao.selectByMap(mapGood);
+                //System.out.println(good.get("goodsNum"));
+                //System.out.println(Integer.parseInt(good.get("goodsNum").toString()));
+                goods1.setGoodsNum(Integer.parseInt(good.get("goodsNum").toString()));
+                goods1.setId(id);
+                goods1.setSpecificationItems(good.get("specificationItems").toString());
+                goodsDao.addGoods(goods1);
+            }
             mapRel.put("id", CommonUtils.getUUID());
             mapRel.put("instoreId",instore.getId());
             mapRel.put("goodsId", id);
             mapRel.put("buyNum", good.get("goodsNum"));
             mapRel.put("comment", good.get("comment"));
-            System.out.println(mapRel);
             instoreDao.insertRel(mapRel);
-            mapGood.put("id", good.get("id"));
-
-            Goods goods1 = goodsDicDao.selectByMap(mapGood);
-            //System.out.println(good);
-            //System.out.println(good.get("specificationItems").toString());
-            goods1.setSpecificationItems(good.get("specificationItems").toString());
-            goods1.setGoodsNum(Integer.parseInt( good.get("goodsNum").toString()));
-            goods1.setId(id);
-            goodsDao.addGoods(goods1);
         }
     }
 }

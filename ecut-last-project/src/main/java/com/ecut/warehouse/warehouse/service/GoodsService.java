@@ -24,7 +24,9 @@ public interface GoodsService {
 
 	public Goods getGoodsById(Goods goods);
 
-	public Goods getGoodsByGoodsCode(Goods goods);
+	public List<Goods> getGoodsByGoodsCode(Goods goods);
 
 	public List<Goods> getGoodsBygoodsName(Goods goods);
+
+	public List<Goods> getGoodsByCondition(Goods goods);
 }

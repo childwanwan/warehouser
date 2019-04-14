@@ -5,6 +5,7 @@ import com.ecut.warehouse.warehouse.domain.ReturnJsonData;
 import com.ecut.warehouse.warehouse.entity.Damage;
 import com.ecut.warehouse.warehouse.entity.Goods;
 import com.ecut.warehouse.warehouse.service.DamageService;
+import com.ecut.warehouse.warehouse.service.GoodsService;
 import com.ecut.warehouse.warehouse.utils.CommonUtils;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.extern.slf4j.Slf4j;
@@ -15,6 +16,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -26,15 +28,32 @@ public class DamageController {
     @Autowired
     private DamageService damageService;
 
+    @Autowired
+    private GoodsService goodsService;
+
     //新增报损单
     @RequestMapping(value = "/report", method = RequestMethod.POST)
     public ResponseEntity<JSONObject> damage( @RequestBody JSONObject jsonObject){
         //1.定义全局变量
         JSONObject returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.OK);
-        List<JSONObject> ids = null;
+        List<JSONObject> idsFirst = null;
+        List<JSONObject> idsLast = new ArrayList<>();
         Damage damage = new Damage();
         //2.封装Damage
-        ids = (List<JSONObject>)jsonObject.get("ids");
+        idsFirst = (List<JSONObject>)jsonObject.get("ids");
+
+        Goods goods = new Goods();
+        Goods restGoods = new Goods();
+        JSONObject idsJson = new JSONObject();
+        for(int i = 0;i<idsFirst.size();i++){
+            goods.setGoodsCode(idsFirst.get(i).get("goodsCode").toString());
+            goods.setSpecificationItems(idsFirst.get(i).get("specificationItems").toString());
+            restGoods = goodsService.getGoodsByCondition(goods).get(0);
+            idsJson.put("id",restGoods.getId());
+            idsJson.put("count",idsFirst.get(i).get("count").toString());
+            idsLast.add(idsJson);
+        }
+
         try{
             damage = loadDamage(jsonObject, damage);
             damage.setId(CommonUtils.getUUID());
@@ -48,8 +67,8 @@ public class DamageController {
         }
         //3.上报报损单
         try{
-            if(null != ids && 0 != ids.size()){
-                damageService.insertDamage(ids, damage);
+            if(null != idsLast && 0 != idsLast.size()){
+                damageService.insertDamage(idsLast, damage);
             }else{
                 returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.PARA_ERROR);
             }
@@ -90,8 +109,9 @@ public class DamageController {
     }
 
     //根据主键查询报损单
-    @RequestMapping(value = "/queryById", method = RequestMethod.GET)
-    public ResponseEntity<String> queryById( @RequestParam String damageId){
+    @RequestMapping(value = "/queryById", method = RequestMethod.POST)
+    public ResponseEntity<String> queryById( @RequestBody JSONObject jsonObject){
+        String damageId = jsonObject.get("damageId").toString();
         //1.定义全局变量
         Damage damage = null;
         List<Goods> goods = null;

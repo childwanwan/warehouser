@@ -99,11 +99,11 @@ public class EmployeeController {
 			if (null != employeeResult && !"".equals(employeeResult)) {
 
 				//System.out.println("sessionId:"+request.getRequestedSessionId());
-				request.getSession().setAttribute(request.getRequestedSessionId(), employeeResult);
+				request.getSession().setAttribute(request.getSession().getId(), employeeResult);
 
 				//返回的数据
 				returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.OK);
-				returnJson.put("sessionId",request.getRequestedSessionId());
+				returnJson.put("sessionId",request.getSession().getId());
 				//调用domain里的函数，将employee转换
 				//System.out.println(returnJson);
 				returnJson.put("data", DoChangFunction.employeeChangeToEmployeeForm(employeeResult));
