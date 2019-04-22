@@ -71,8 +71,10 @@ public class DamageServiceImpl implements DamageService {
         //1.先删除原来的之间表关系
         damageDao.deleteRelById(damage.getId());
         //2.重新建立中间表联系
-        for(JSONObject id: ids){
-            damageDao.insertGoodDamageRel(id.get("id").toString(), damage.getId(), (Integer)id.get("count"));
+        if (null !=ids &&"".equals(ids)&&ids.size()>0) {
+            for (JSONObject id : ids) {
+                damageDao.insertGoodDamageRel(id.get("id").toString(), damage.getId(), (Integer) id.get("count"));
+            }
         }
         //3.更新报损单信息
         damageDao.updateDamage(damage);

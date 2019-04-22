@@ -3,13 +3,12 @@ package com.ecut.warehouse.filter;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
-
+import org.springframework.data.redis.core.RedisTemplate;
 
 import javax.servlet.*;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -28,6 +27,8 @@ import java.util.List;
  */
 @Configuration
 public class LoginFilter implements Filter {
+	@Autowired
+	private RedisTemplate redisTemplate;
 
 	// 多个跨域域名设置
 	public static final String[] ALLOW_DOMAIN = {"http://localhost:8080",
@@ -83,7 +84,7 @@ public class LoginFilter implements Filter {
 					return;
 			}
 				//null == redisConn.getDataFromRedis(cookies.getName()) || "".equals(redisConn.getDataFromRedis(cookies.getName()))
-				if (null == request.getSession().getAttribute(tokenHeader) || "".equals(request.getSession().getAttribute(tokenHeader))) {
+				if (null == redisTemplate.opsForValue().get(tokenHeader) || "".equals(redisTemplate.opsForValue().get(tokenHeader))) {
 					log.debug("仓库管理门户请求链接" + request.getServletPath() + "被拦截，session没有用户信息");
 					response.setStatus(200);
 					response.setContentType("application/json;charset=utf-8");

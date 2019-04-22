@@ -49,6 +49,23 @@
         where goods_code = #{goodsCode}
     </update>
 
+    <update id="updateGoodsDirByGoodsDirId" parameterType="com.ecut.warehouse.warehouse.entity.Goods">
+        update tbl_goods_dic
+        <set>
+            <if test="goodsCode != null and goodsCode != ''">goods_code =#{goodsCode},</if>
+            <if test="goodsType != null and goodsType != ''">goods_type =#{goodsType},</if>
+            <if test="goodsName != null and goodsName != ''">goods_name =#{goodsName},</if>
+            <if test="specificationItems != null and specificationItems != ''">specification_items =#{specificationItems},</if>
+            <if test="customAttributeItems != null and customAttributeItems != ''">custom_attribute_items =#{customAttributeItems},</if>
+            <if test="status != null">status =#{status},</if>
+            <if test="comment != null and comment != ''">comment =#{comment},</if>
+            <if test="goodsNum != null">goods_num =#{goodsNum}</if>
+        </set>
+        where id = #{id}
+    </update>
+
+
+
 
 
     <!--增加操作-->

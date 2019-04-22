@@ -1,7 +1,6 @@
 package com.ecut.warehouse.warehouse.controller;
 
 import com.ecut.warehouse.warehouse.domain.ReturnJsonData;
-import com.ecut.warehouse.warehouse.entity.Goods;
 import com.ecut.warehouse.warehouse.entity.Provider;
 import com.ecut.warehouse.warehouse.service.ProviderService;
 import com.ecut.warehouse.warehouse.utils.CommonUtils;
@@ -149,6 +148,7 @@ public class ProviderControllre {
 	 */
 	@RequestMapping(value = "/provider/updateProvider", method = RequestMethod.POST)
 	public ResponseEntity<JSONObject> updateProvider(@RequestBody Provider provider) {
+		//System.out.println(provider);
 		//定义返回的json
 		JSONObject returnJson = new JSONObject();
 		if (null==provider.getId()||"".equals(provider.getId())){

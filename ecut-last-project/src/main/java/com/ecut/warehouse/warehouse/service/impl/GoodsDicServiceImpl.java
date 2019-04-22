@@ -42,4 +42,9 @@ public class GoodsDicServiceImpl implements GoodsDicService {
         return goodsDicDao.selectAll(good);
     }
 
+    @Override
+    public int update(Goods goods) {
+        return goodsDicDao.updateGoodsDirByGoodsDirId(goods);
+    }
+
 }

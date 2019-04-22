@@ -7,15 +7,16 @@ import com.ecut.warehouse.warehouse.entity.Goods;
 import com.ecut.warehouse.warehouse.service.DamageService;
 import com.ecut.warehouse.warehouse.service.GoodsService;
 import com.ecut.warehouse.warehouse.utils.CommonUtils;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.extern.slf4j.Slf4j;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -176,6 +177,7 @@ public class DamageController {
         List<JSONObject> ids = (List<JSONObject>) jsonObject.get("ids");
         //3.修改信息
         //3.1修改商品列表
+        damage.setApprovalTime(new Date());
         damageService.updateDamage(damage, ids);
         //3.2修改damage信息
         //4.处理返回值
@@ -200,7 +202,7 @@ public class DamageController {
             damage.setCreatePersonId(jsonObject.get("createPersonId").toString());
         if(null != jsonObject.get("checkPersonId") && !"".equals(jsonObject.get("checkPersonId").toString()))
             damage.setCheckPersonId(jsonObject.get("checkPersonId").toString());
-        System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"+damage);
+        //System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"+damage);
         return damage;
     }
 

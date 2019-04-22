@@ -1,23 +1,22 @@
 package com.ecut.warehouse.warehouse.controller;
 
 import com.ecut.warehouse.warehouse.domain.ReturnJsonData;
-import com.ecut.warehouse.warehouse.entity.Goods;
 import com.ecut.warehouse.warehouse.entity.Outstore;
 import com.ecut.warehouse.warehouse.entity.OutstoreItems;
 import com.ecut.warehouse.warehouse.service.GoodsService;
 import com.ecut.warehouse.warehouse.service.OutstoreItemsService;
 import com.ecut.warehouse.warehouse.service.OutstoreService;
-import com.ecut.warehouse.warehouse.utils.CommonUtils;
-import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -99,8 +98,9 @@ public class OutstoreController {
 	 * @Return: org.springframework.http.ResponseEntity<net.sf.json.JSONObject>
 	 * @date: 2019/3/29  8:41
 	 */
-	@RequestMapping(value = "/outstore/getOutstoresById", method = RequestMethod.GET)
-	public ResponseEntity<JSONObject> getOutstoresById(@RequestParam String id) {
+	@RequestMapping(value = "/outstore/getOutstoresById", method = RequestMethod.POST)
+	public ResponseEntity<JSONObject> getOutstoresById(@RequestBody JSONObject jsonObject) {
+		String id = jsonObject.get("id").toString();
 
 		//定义返回的json
 		JSONObject returnJson = new JSONObject();
@@ -164,9 +164,9 @@ public class OutstoreController {
 	}
 
 
-	@RequestMapping(value = "/outstore/getOutstoresGoodsByOutstoresId", method = RequestMethod.GET)
-	public ResponseEntity<JSONObject> getOutstoresGoodsByOutstoresId(@RequestParam String id) {
-
+	@RequestMapping(value = "/outstore/getOutstoresGoodsByOutstoresId", method = RequestMethod.POST)
+	public ResponseEntity<JSONObject> getOutstoresGoodsByOutstoresId(@RequestBody JSONObject jsonObject) {
+		String id = jsonObject.get("id").toString();
 		//定义返回的json
 		JSONObject returnJson = new JSONObject();
 

@@ -14,6 +14,7 @@ public interface GoodsDicService {
     void deleteByGoodsCode(String goodsCode);
 
     List<Goods> selectAll(Goods good);
+    int update(Goods goods);
 
 
 }

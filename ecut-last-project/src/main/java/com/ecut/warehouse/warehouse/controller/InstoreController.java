@@ -2,13 +2,11 @@ package com.ecut.warehouse.warehouse.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.ecut.warehouse.warehouse.domain.ReturnJsonData;
-import com.ecut.warehouse.warehouse.entity.Goods;
 import com.ecut.warehouse.warehouse.entity.Instore;
 import com.ecut.warehouse.warehouse.entity.InstoreItems;
 import com.ecut.warehouse.warehouse.service.InstoreItemsService;
 import com.ecut.warehouse.warehouse.service.InstoreService;
 import com.ecut.warehouse.warehouse.utils.CommonUtils;
-import com.ecut.warehouse.warehouse.utils.DateUtil;
 import lombok.extern.slf4j.Slf4j;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +14,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 /**
  * @author yanhq@si-tech.com.cn
@@ -47,7 +46,6 @@ public class InstoreController {
         //2.封装实体
         instore = loadInstore(jsonObject, instore);
         //3.新增
-
             instoreService.insert(instore.setId(CommonUtils.getUUID()), goodsId);
         try{}catch(Exception e){
             log.error("========================入库单新增失败"+ e.getMessage());

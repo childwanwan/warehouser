@@ -26,6 +26,24 @@
         where status != 9999
     </select>
 
+    <!--根据状态查询所有的职工操作-->
+    <select id="getEmployeesByStatus" resultType="com.ecut.warehouse.warehouse.entity.Employee">
+        SELECT   id,employee_name,password,telephone,addr,status
+        FROM tbl_employee
+        where status = #{status}
+    </select>
+
+
+
+    <!--查询所有的职工操作-->
+    <select id="getEmployeeByEmployeeName" resultType="com.ecut.warehouse.warehouse.entity.Employee">
+        SELECT   id,employee_name,password,telephone,addr,status
+        FROM tbl_employee
+        where status != 9999 and status = 1 and employee_name like CONCAT('%',#{employeeName,jdbcType=VARCHAR},'%')
+    </select>
+
+
+
     <!--更新操作-->
     <update id="updateEmployee" parameterType="com.ecut.warehouse.warehouse.entity.Employee">
         UPDATE tbl_employee

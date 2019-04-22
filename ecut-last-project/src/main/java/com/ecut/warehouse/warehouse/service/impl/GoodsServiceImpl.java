@@ -22,6 +22,7 @@ public class GoodsServiceImpl implements GoodsService {
 	@Autowired
 	private GoodsDao goodsDao;
 	@Override
+
 	public List<Goods> queryGoods() {
 		return goodsDao.queryGoods();
 	}

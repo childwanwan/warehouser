@@ -151,6 +151,9 @@
             <if test="checkPersonId != null and checkPersonId != ''">
                 check_person_id = #{checkPersonId,jdbcType=VARCHAR},
             </if>
+            <if test="status != null and status != ''">
+                status = #{status},
+            </if>
         </set>
         where id = #{id} and status != 9999
     </update>

@@ -29,4 +29,8 @@ public interface EmployeeDao {
 	public int addEmployee(Employee employee);
 
 	public List<Employee> getEmployees();
+
+	public List<Employee> getEmployeeByEmployeeName(Employee employee);
+
+	public List<Employee> getEmployeesByStatus(Employee employee);
 }

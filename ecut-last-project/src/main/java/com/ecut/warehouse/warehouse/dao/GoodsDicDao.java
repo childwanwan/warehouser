@@ -16,5 +16,7 @@ public interface GoodsDicDao {
 
     List<Goods> selectAll(Goods good);
 
+    int updateGoodsDirByGoodsDirId(Goods goods);
+
 
 }

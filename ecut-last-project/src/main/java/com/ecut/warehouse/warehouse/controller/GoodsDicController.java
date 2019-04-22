@@ -8,6 +8,7 @@ import com.ecut.warehouse.warehouse.entity.Goods;
 import com.ecut.warehouse.warehouse.service.GoodsDicService;
 import com.ecut.warehouse.warehouse.utils.CommonUtils;
 import lombok.extern.slf4j.Slf4j;
+import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -46,9 +47,22 @@ public class GoodsDicController {
         //2.查询插入的商品是否存在（根据商品编号）
         tmpGood = goodsDicService.selectByMap(condition);
         if(null == tmpGood || 9999 == tmpGood.getStatus()){
+
+            if (null != good.getSpecificationItems() && !"".equals(good.getSpecificationItems())){
+                String s = good.getSpecificationItems();
+                //[a,c,d]
+                String t = s.substring(1,s.length()-1);
+                //System.out.println();
+                String[]  strs=t.split(",");
+                //System.out.println(strs);
+                good.setSpecificationItems(JSONArray.fromObject(strs).toString());
+            }
+
             //3.新增
             try{
                 good.setId(CommonUtils.getUUID());
+                good.setGoodsNum(1);
+                //good.setSpecificationItems()
                 goodsDicService.insert(good);
             }catch(Exception e){
                 log.error("========================商品字典新增失败"+ e.getMessage());
@@ -63,8 +77,9 @@ public class GoodsDicController {
         return new ResponseEntity<>(returnJson, HttpStatus.ACCEPTED);
     }
 
-    @GetMapping("/delete")
-    public ResponseEntity<JSONObject> delete(@RequestParam String goodCode){
+    @PostMapping("/delete")
+    public ResponseEntity<JSONObject> delete(@RequestBody JSONObject jsonObject ){
+        String goodCode = jsonObject.get("goodCode").toString();
         //1.定义全局变量
         JSONObject returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.OK);
         //2.删除
@@ -124,6 +139,42 @@ public class GoodsDicController {
         //3.返回值处理
         returnJson.put("data", list);
         return new ResponseEntity<>(JSON.toJSONString(returnJson), HttpStatus.ACCEPTED);
+    }
+
+
+
+    @PostMapping("/update")
+    public ResponseEntity<JSONObject> update(@RequestBody Goods good){
+        //定义返回的json
+        JSONObject returnJson = new JSONObject();
+
+        if (null == good.getGoodsNum() || "".equals(good.getGoodsNum())) {
+            good.setGoodsNum(1);
+        }
+        if (null == good.getStatus()) {
+            good.setStatus(1);
+        }
+        if (null != good.getSpecificationItems() && !"".equals(good.getSpecificationItems())){
+            String s = good.getSpecificationItems();
+            //[a,c,d]
+            String t = s.substring(1,s.length()-1);
+            //System.out.println();
+            String[]  strs=t.split(",");
+            //System.out.println(strs);
+            good.setSpecificationItems(JSONArray.fromObject(strs).toString());
+        }
+        //System.out.println(good);
+        int i = 0;
+        try {
+            i = goodsDicService.update(good);
+        } catch (Exception e) {
+            returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.SYS_ERROR);
+        }
+        if (i > 0) {
+            returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.OK);
+        }
+        //获取参数，及将参数封装成对象
+        return new ResponseEntity<>(returnJson, HttpStatus.ACCEPTED);
     }
 
 

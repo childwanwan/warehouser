@@ -4,12 +4,11 @@ import com.ecut.warehouse.warehouse.domain.DoChangFunction;
 import com.ecut.warehouse.warehouse.domain.EmployeeForm;
 import com.ecut.warehouse.warehouse.domain.ReturnJsonData;
 import com.ecut.warehouse.warehouse.entity.Employee;
-import com.ecut.warehouse.warehouse.entity.Goods;
 import com.ecut.warehouse.warehouse.service.EmployeeService;
 import com.ecut.warehouse.warehouse.utils.CommonUtils;
 import net.sf.json.JSONObject;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -22,6 +21,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Copyright (C), 2019-2019, XXX有限公司
@@ -37,6 +37,9 @@ import java.util.List;
 public class EmployeeController {
 
 	@Autowired
+	private RedisTemplate redisTemplate;
+
+	@Autowired
 	private EmployeeService employeeService;
 
 	@Autowired
@@ -44,7 +47,7 @@ public class EmployeeController {
 
 	@RequestMapping(value = "/test1", method = RequestMethod.GET)
 	public ResponseEntity<JSONObject> test(HttpServletResponse response) {
-		System.out.println("test1");
+		//System.out.println("test1");
 		JSONObject returnJson = new JSONObject();
 		returnJson.put("hello", "world");
 		//response.addCookie(new Cookie("wan","pingping"));
@@ -99,7 +102,9 @@ public class EmployeeController {
 			if (null != employeeResult && !"".equals(employeeResult)) {
 
 				//System.out.println("sessionId:"+request.getRequestedSessionId());
-				request.getSession().setAttribute(request.getSession().getId(), employeeResult);
+//				request.getSession().setAttribute(request.getSession().getId(), employeeResult);
+				redisTemplate.opsForValue().set(request.getSession().getId(), employeeResult);
+				redisTemplate.expire(request.getSession().getId(),30, TimeUnit.MINUTES);
 
 				//返回的数据
 				returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.OK);
@@ -173,6 +178,36 @@ public class EmployeeController {
 	}
 
 
+	/*
+	 * @Author:Childwanwan
+	 * @Description:根据名字获取职工信息
+	 * @Para:* @param 根据名字获取职工信息
+	 * @data:2019/3/17  22:50
+	 */
+	@RequestMapping(value = "/employee/getEmployeeByEmployeeName", method = RequestMethod.POST)
+	public ResponseEntity<JSONObject> getEmployeeByEmployeeName(@RequestBody Employee employee) {
+		//定义返回的json
+		JSONObject returnJson = new JSONObject();
+		List<Employee> returnEmployee = new ArrayList<>();
+		try {
+			returnEmployee = employeeService.getEmployeeByEmployeeName(employee);
+		} catch (Exception e) {
+			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.SYS_ERROR);
+		}
+		if (null != returnEmployee && returnEmployee.size()>0) {
+			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.OK);
+			List<EmployeeForm> list = new ArrayList<>();
+			for (int i = 0;i<returnEmployee.size();i++){
+				list.add(DoChangFunction.employeeChangeToEmployeeForm(returnEmployee.get(i)));
+			}
+			returnJson.put("data", list);
+		} else {
+			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.DATA_ERROR);
+		}
+		return new ResponseEntity<>(returnJson, HttpStatus.ACCEPTED);
+	}
+
+
 	@RequestMapping(value = "/employee/getEmployees", method = RequestMethod.GET)
 	public ResponseEntity<JSONObject> getEmployees() {
 		//定义返回的json
@@ -197,6 +232,31 @@ public class EmployeeController {
 	}
 
 
+	@RequestMapping(value = "/employee/getEmployeesByStatus", method = RequestMethod.POST)
+	public ResponseEntity<JSONObject> getEmployeesByStatus(@RequestBody Employee employee) {
+		//定义返回的json
+		JSONObject returnJson = new JSONObject();
+		List<Employee> returnEmployee = new ArrayList<>();
+		try {
+			returnEmployee = employeeService.getEmployeesByStatus(employee);
+		} catch (Exception e) {
+			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.SYS_ERROR);
+		}
+		if (null != returnEmployee && returnEmployee.size()>0) {
+			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.OK);
+			List<EmployeeForm> list = new ArrayList<>();
+			for (int i = 0;i<returnEmployee.size();i++){
+				list.add(DoChangFunction.employeeChangeToEmployeeForm(returnEmployee.get(i)));
+			}
+			returnJson.put("data", list);
+		} else {
+			returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.DATA_ERROR);
+		}
+		return new ResponseEntity<>(returnJson, HttpStatus.ACCEPTED);
+	}
+
+
+
 	/*
 	 * @Author:Childwanwan
 	 * @Description:添加employee
@@ -215,7 +275,7 @@ public class EmployeeController {
 		if(null ==employee.getPassword() || "".equals(employee.getPassword())){
 			employee.setPassword("123456");
 		}
-		System.out.println(employee);
+		//System.out.println(employee);
 		try {
 			i = employeeService.addEmployee(employee);
 		} catch (Exception e) {
@@ -228,4 +288,25 @@ public class EmployeeController {
 		}
 		return new ResponseEntity<>(returnJson, HttpStatus.ACCEPTED);
 	}
+
+
+	/*
+	 * @Author:Childwanwan
+	 * @Description:登出
+	 * @Para:* @param
+	 * @data:2019/3/17  22:50
+	 */
+	@RequestMapping(value = "/employee/logOut", method = RequestMethod.POST)
+	public ResponseEntity<JSONObject> logOut(HttpServletResponse response, HttpServletRequest request,@RequestBody JSONObject jsonObject) {
+		//定义返回的json
+		JSONObject returnJson = new JSONObject();
+		returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.OK);
+		//request.getSession().setAttribute(request.getSession().getId(), employeeResult);
+		//request.getSession().removeAttribut(xxxxxx);
+		//System.out.println(jsonObject.get("token").toString());
+		redisTemplate.delete(jsonObject.get("token").toString());
+		return new ResponseEntity<>(returnJson, HttpStatus.ACCEPTED);
+	}
+
+
 }
