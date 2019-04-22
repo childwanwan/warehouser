@@ -88,9 +88,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/GoodsDicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/GoodsDicController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/InstoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/InstoreController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/OutstoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/OutstoreController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/ProviderControllre.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/controller/ProviderControllre.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/dao/EmployeeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/dao/EmployeeDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/dao/GoodsDicDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/dao/GoodsDicDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ecut-last-project/src/main/java/com/ecut/warehouse/warehouse/service/EmployeeService.java" afterDir="false" />
@@ -592,12 +589,12 @@
       <workItem from="1555635638554" duration="1960000" />
       <workItem from="1555810673787" duration="5595000" />
       <workItem from="1555894451274" duration="141000" />
-      <workItem from="1555897009627" duration="19728000" />
+      <workItem from="1555897009627" duration="20053000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="246582000" />
+    <option name="totallyTimeSpent" value="246907000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
