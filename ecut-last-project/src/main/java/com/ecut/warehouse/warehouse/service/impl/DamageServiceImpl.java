@@ -69,7 +69,7 @@ public class DamageServiceImpl implements DamageService {
     @Transactional
     public void updateDamage(Damage damage, List<JSONObject> ids) {
         //1.先删除原来的之间表关系
-        damageDao.deleteRelById(damage.getId());
+        //damageDao.deleteRelById(damage.getId());
         //2.重新建立中间表联系
         if (null !=ids &&"".equals(ids)&&ids.size()>0) {
             for (JSONObject id : ids) {

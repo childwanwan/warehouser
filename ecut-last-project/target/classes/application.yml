@@ -4,15 +4,15 @@ spring:
   application:
     name: warehouse
   datasource:
-    url: jdbc:mysql://120.78.132.185:3306/warehouse?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://120.78.64.193:3306/warehouse?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC
     username: root
-    password: 123
+    password: root
     hikari:
       maximum-pool-size: 30
       minimum-idle: 10
 
   redis:
-    host: 120.78.132.185 # host ,默认 localhost
+    host: 120.78.64.193 # host ,默认 localhost
     port: 6379 # 端口号，默认6379
     jedis:
       pool:

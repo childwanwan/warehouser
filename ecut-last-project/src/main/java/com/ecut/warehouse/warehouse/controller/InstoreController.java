@@ -39,6 +39,7 @@ public class InstoreController {
 
     @PostMapping("/insert")
     public ResponseEntity<JSONObject> insert(@RequestBody JSONObject jsonObject){
+        //System.out.println(jsonObject);
         //1.定义全局变量
         JSONObject returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.OK);
         Instore instore = new Instore();

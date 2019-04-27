@@ -63,7 +63,15 @@ public class InstoreServiceImpl implements InstoreService {
             mapRel = new HashMap<String, Object>();
             mapGood = new HashMap<String, Object>();
             //System.out.println(good.get("id"));
-            tmpGood = goodsDao.getGoodsById(new Goods().setId(good.get("id").toString()));
+            Goods conditionGood = new Goods();
+            conditionGood.setGoodsCode(good.get("goodsCode").toString());
+            conditionGood.setSpecificationItems(good.get("specificationItems").toString());
+
+            List<Goods> list = goodsDao.getGoodsByCondition(conditionGood);
+            if (list.size()>0){
+                tmpGood = list.get(0);
+            }
+            //tmpGood = goodsDao.getGoodsById(new Goods().setId(good.get("id").toString()));
             //System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
            // System.out.println(tmpGood);
            // System.out.println(good.get("specificationItems").toString().equals(tmpGood.getSpecificationItems()));
