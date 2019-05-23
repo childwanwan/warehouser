@@ -23,6 +23,7 @@ com\ecut\warehouse\warehouse\entity\Instore.class
 com\ecut\warehouse\warehouse\entity\InstoreItems.class
 com\ecut\warehouse\warehouse\domain\ReturnJsonData.class
 com\ecut\warehouse\warehouse\service\ProviderService.class
+com\ecut\warehouse\warehouse\config\RedisConfig.class
 com\ecut\warehouse\warehouse\entity\Damage.class
 com\ecut\warehouse\warehouse\utils\CommonUtils.class
 com\ecut\warehouse\warehouse\utils\DateUtil$1.class

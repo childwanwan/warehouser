@@ -1,7 +1,6 @@
 package com.ecut.warehouse.warehouse.service.impl;
 
 import com.ecut.warehouse.warehouse.dao.OutstoreDao;
-import com.ecut.warehouse.warehouse.domain.ReturnJsonData;
 import com.ecut.warehouse.warehouse.entity.Goods;
 import com.ecut.warehouse.warehouse.entity.Outstore;
 import com.ecut.warehouse.warehouse.entity.OutstoreItems;
@@ -68,7 +67,7 @@ public class OutstoreServiceImpl implements OutstoreService {
 			Goods updateGoods = new Goods();
 			Goods oldGoods = new Goods();
 			Goods paramGoods = new Goods();
-
+			try {
 				for (int i = 0; i < goodsList.size(); i++) {
 					//应该是有一个goodsCode，还有一个是goodsNum
 					//updateGoods = (Goods) goodsList.get(i);
@@ -93,7 +92,7 @@ public class OutstoreServiceImpl implements OutstoreService {
 					}
 					updateGoodsNum = updateGoodsNum + goodsService.updateGoods(updateGoods);
 				}
-			try {} catch (Exception e) {
+			} catch (Exception e) {
 				throw new RuntimeException("系统内部异常！");
 			}
 		}

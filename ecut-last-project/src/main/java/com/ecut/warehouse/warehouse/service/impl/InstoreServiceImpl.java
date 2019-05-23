@@ -79,6 +79,7 @@ public class InstoreServiceImpl implements InstoreService {
             if(null != tmpGood && good.get("specificationItems").toString().equals(tmpGood.getSpecificationItems())){
                 //加数量
                 goodsDao.updateGoods(tmpGood.setGoodsNum(tmpGood.getGoodsNum()+Integer.parseInt(good.get("goodsNum").toString())));
+                mapRel.put("goodsId", tmpGood.getId());
             }else{
                 //添加商品
                 mapGood.put("id", good.get("id"));
@@ -89,10 +90,10 @@ public class InstoreServiceImpl implements InstoreService {
                 goods1.setId(id);
                 goods1.setSpecificationItems(good.get("specificationItems").toString());
                 goodsDao.addGoods(goods1);
+                mapRel.put("goodsId", id);
             }
             mapRel.put("id", CommonUtils.getUUID());
             mapRel.put("instoreId",instore.getId());
-            mapRel.put("goodsId", id);
             mapRel.put("buyNum", good.get("goodsNum"));
             mapRel.put("comment", good.get("comment"));
             instoreDao.insertRel(mapRel);

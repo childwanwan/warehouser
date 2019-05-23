@@ -8,6 +8,7 @@
         SELECT   id,provide_id,instore_time,total_num,status,reserver_id
         FROM tbl_instore
         where id = #{instoreId} and status != 9999
+        order by instore_time
     </select>
 
     <select id="selectAll" resultType="com.ecut.warehouse.warehouse.entity.Instore" parameterType="com.ecut.warehouse.warehouse.entity.Instore">
@@ -26,6 +27,7 @@
         <if test="reserverId != null and reserverId != ''">
             and reserver_id = #{reserverId,jdbcType=VARCHAR}
         </if>
+        order by instore_time
     </select>
 
     <update id="deleteById" parameterType="java.lang.String">

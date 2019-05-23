@@ -36,6 +36,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 	}
 
 	@Override
+	@Transactional
 	public int updateEmployee(Employee employee) {
 		return employeeDao.updateEmployee(employee);
 	}

@@ -53,10 +53,10 @@ public class DamageServiceImpl implements DamageService {
     public void updateStatus(String damageId, Integer status) {
         //只要状态吗为2，代表审核通过，商品数量减少
         List<String> goodsId =null;
-        damageDao.updateStatus(damageId, status);
+        damageDao.updateStatus(damageId, status,new Date());
         if(2 == status){
             //添加审核时间
-            damageDao.updateDamage(new Damage().setApprovalTime(new Date()));
+            damageDao.updateDamage(new Damage().setApprovalTime(new Date()).setId(damageId));
             //查找关联的商品id
             goodsId = damageDao.selectGoodsId(damageId);
             for(String goodId: goodsId){

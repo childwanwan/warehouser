@@ -5,6 +5,7 @@ import com.ecut.warehouse.warehouse.entity.Goods;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.Date;
 import java.util.List;
 
 @Mapper
@@ -21,7 +22,7 @@ public interface DamageDao {
 
     List<Goods> queryGoodsById(String damageId);
 
-    void updateStatus(@Param("damageId") String damageId,@Param("status") Integer status);
+    void updateStatus(@Param("damageId") String damageId, @Param("status") Integer status, @Param("approvalTime") Date approvalTime);
 
     void deleteRelById(String damageId);
 

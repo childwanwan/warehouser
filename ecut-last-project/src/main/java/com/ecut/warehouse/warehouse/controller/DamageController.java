@@ -178,6 +178,7 @@ public class DamageController {
         //3.修改信息
         //3.1修改商品列表
         damage.setApprovalTime(new Date());
+        //System.out.println("*******************************************************************88"+damage);
         damageService.updateDamage(damage, ids);
         //3.2修改damage信息
         //4.处理返回值

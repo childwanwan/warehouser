@@ -148,6 +148,8 @@ public class InstoreController {
 
         try {
             returnList = instoreItemsService.getInstoresGoodsByInstoresId(paraInstoreItems);
+
+            //System.out.println(returnList);
         }catch (Exception e){
             returnJson = ReturnJsonData.returnJsonFunction(ReturnJsonData.SYS_ERROR);
         }

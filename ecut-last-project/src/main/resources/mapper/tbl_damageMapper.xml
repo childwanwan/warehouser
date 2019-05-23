@@ -120,7 +120,7 @@
 
     <update id="updateStatus" >
         update tbl_damage
-        set status = #{status,jdbcType=INTEGER}
+        set status = #{status,jdbcType=INTEGER} , approval_time = #{approvalTime,jdbcType=DATE}
         where id = #{damageId,jdbcType=VARCHAR}
     </update>
 
